@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UrticariApp</string>
+    <string name="uas_title">Registrar actividad</string>
+    <string name="date_title">Fecha:</string>
+    <string name="date_select">otra fecha</string>
+    <string name="wheals_title">¿Cuántas ronchas tienes?</string>
+    <string name="wheals_level0">ninguna</string>
+    <string name="wheals_level1">&lt;20</string>
+    <string name="wheals_level2">20-50</string>
+    <string name="wheals_level3">>50</string>
+    <string name="itch_title">¿Cómo consideras el picor?</string>
+    <string name="itch_level0">no pica</string>
+    <string name="itch_level0_explanation">no pica</string>
+    <string name="itch_level1">leve</string>
+    <string name="itch_level1_explanation">leve</string>
+    <string name="itch_level2">moderado</string>
+    <string name="itch_level2_explanation">moderado</string>
+    <string name="itch_level3">severo</string>
+    <string name="itch_level3_explanation">severo</string>
+    <string name="note_title">Nota</string>
+    <string name="log_angio">Angioedema</string>
+    <string name="add_photo">Foto</string>
+    <string name="back">Volver</string>
+    <string name="note_hint">Introduce aquí el comentario que desees.</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="uas_menu_item">Registrar actividad</string>
+    <string name="member_menu_item">Hazte socio/a</string>
+    <string name="history_menu_item">Historial</string>
+    <string name="close_button">Cerrar</string>
+    <string name="not_yet">En breve ofreceremos esta funcionalidad.</string>
+    <string name="title_activity_urticaria">La Urticaria</string>
+    <string name="urticaria_menu_item">La Urticaria</string>
+    <string name="title_activity_member">Hazte socio/a</string>
+    <string name="add_note">Añadir nota</string>
+    <string name="itch_level_info"></string>
+    <string name="wheals_level_info"></string>
+    <string name="date_info">Elije la fecha que deseas registrar.</string>
+    <string name="title_activity_history">Historial</string>
+    <string name="title_activity_main_activity2">MainActivity2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="item_info_hint">Selecciona una fecha resaltada para consultar el nivel UAS que registraste para ese día.</string>
+    <string name="item_icon_itch">Picor</string>
+    <string name="item_icon_wheals">Ronchas</string>
+    <string name="item_icon_angio">Angioedema</string>
+    <string name="no_note">No hay ninguna nota registrada para este día.</string>
+    <string name="action_export">Exportar</string>
+    <string name="csv_header">Fecha, Puntuación Ronchas, Puntuación Picor, UAS, Angioedema, Notas</string>
+    <string name="history_title">Historial</string>
+    <string name="angio_lips">Labios</string>
+    <string name="angio_tongue">Lengua</string>
+    <string name="angio_eyes">Ojos</string>
+    <string name="angio_throat">Garganta</string>
+    <string name="angio_face">Cara</string>
+    <string name="angio_hands">Manos</string>
+    <string name="angio_feet">Pies</string>
+    <string name="angio_genitals">Genitales</string>
+    <string name="angio_question">¿En qué zonas tienes angioedema?</string>
+    <string name="action_disclaimer">Limitación de responsabilidad</string>
+    <string name="text_disclaimer">
+        Esta aplicación está creada para que los afectados de urticaria
+        puedan registrar el progreso de la enfermedad para su uso personal.
+        \nEl usuario es el único propietario y responsable de los datos
+        guardados mediante esta aplicación.
+        Los datos se guardan únicamente en la memoria de su teléfono móvil:
+        no se transfieren a ningún servidor ni pueden ser leídos por otras
+        aplicaciones a no ser que el mismo usuario decida exportarlos.
+        \nLa AAUC no evalúa, aprueba o recomienda ninguna medicación, producto,
+        equipo o tratamiento particular.</string>
+    <string name="action_suggestions">Sugerencias</string>
+    <string name="text_suggestions">
+        ¿Tienes alguna idea?
+        \nEstaremos encantados de escucharla, manda un correo
+        electrónico a hola@urticariacronica.org con tus sugerencias
+        para mejorar la aplicación.
+        \n¡Gracias!
+    </string>
+</resources>

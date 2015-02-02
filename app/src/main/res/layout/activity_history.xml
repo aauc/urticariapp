@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Main">
+
+    <RelativeLayout
+      android:id="@+id/footer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/uas_level_none"
+            android:drawableLeft="@drawable/uas_level_none"
+            android:text="@string/item_icon_wheals"
+            android:gravity="center_vertical"
+            android:id="@+id/whealsIcon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/whealsIcon"
+            android:drawableLeft="@drawable/uas_level_none"
+            android:text="@string/item_icon_itch"
+            android:gravity="center_vertical"
+            android:id="@+id/itchIcon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itchIcon"
+            android:drawableLeft="@drawable/angio_0"
+            android:text="@string/item_icon_angio"
+            android:gravity="center_vertical"
+            android:id="@+id/angioIcon"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:id="@+id/itemInfoNotes"
+            android:layout_toRightOf="@id/whealsIcon"
+            android:gravity="center"
+            android:text="@string/item_info_hint"/>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+      android:id="@+id/calendarScroll"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_above="@id/footer">
+
+        <com.squareup.timessquare.CalendarPickerView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </ScrollView>
+
+</RelativeLayout>
