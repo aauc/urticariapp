@@ -46,11 +46,11 @@ public class CSVExporter {
                 int wheals = item.getWheals().toValue();
                 int itch = item.getWheals().toValue();
                 writer.write(dateFormat.format(item.getDate()) + "," +
-                        wheals+ "," +
-                        itch + "," +
-                        (wheals + itch) + "," +
-                        formatAngioedemaCSV(item.getAngio()) + "," +
-                        item.getNote() + "\n");
+                             wheals+ "," +
+                             itch + "," +
+                             (wheals + itch) + "," +
+                             formatAngioedemaCSV(item.getAngio()) + ",\"" +
+                             item.getNote() + "\"\n");
             }
             writer.flush();
             writer.close();
