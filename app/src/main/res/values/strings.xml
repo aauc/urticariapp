@@ -83,7 +83,6 @@
     <string name="limit_clothing">Ropa</string>
     <string name="limit_leisure">Ocio</string>
     <string name="limit_sleep">Dormir</string>
-    <string name="limit_social">Socializar</string>
     <string name="limit_sex">Vida sexual</string>
     <string name="limitations_question">¿En qué  te ha limitado la urticaria?</string>
 </resources>
