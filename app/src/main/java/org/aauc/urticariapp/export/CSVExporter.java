@@ -10,8 +10,10 @@ import org.aauc.urticariapp.data.LogItem;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
@@ -40,7 +42,8 @@ public class CSVExporter {
 
     private void writeContents(final File outputFile, final Collection<LogItem> items) {
         try {
-            Writer writer = new BufferedWriter(new FileWriter(outputFile));
+            Writer writer = new BufferedWriter(
+                    new OutputStreamWriter(new FileOutputStream(outputFile), "UTF-8"));
             writer.write(textResource(R.string.csv_header) + "\n");
             for (LogItem item : items) {
                 int wheals = item.getWheals().toValue();

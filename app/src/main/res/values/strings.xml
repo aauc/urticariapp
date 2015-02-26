@@ -46,7 +46,7 @@
     <string name="item_icon_angio">Angioedema</string>
     <string name="no_note">No hay ninguna nota registrada para este día.</string>
     <string name="action_export">Exportar</string>
-    <string name="csv_header">Fecha, Puntuación Ronchas, Puntuación Picor, UAS, Angioedema, Notas</string>
+    <string name="csv_header">Fecha, Puntuación Ronchas, Puntuación Picor, UAS, Angioedema, Limitaciones, Notas</string>
     <string name="history_title">Historial</string>
     <string name="angio_lips">Labios</string>
     <string name="angio_tongue">Lengua</string>
