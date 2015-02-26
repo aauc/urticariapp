@@ -236,11 +236,11 @@
             android:layout_width="0px"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/back"
-            android:drawableTop="@drawable/exit"
-            android:onClick="back"
+            android:text="@string/limitations"
+            android:drawableTop="@drawable/limitations"
+            android:onClick="addLimitations"
             android:background="@android:color/transparent"
-            android:id="@+id/save_item"
+            android:id="@+id/logLimitations"
             style="@android:style/Widget.Button.Small" />
     </LinearLayout>
 

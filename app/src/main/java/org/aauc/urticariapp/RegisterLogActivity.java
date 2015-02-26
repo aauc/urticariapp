@@ -4,8 +4,13 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -15,19 +20,21 @@ import android.widget.Toast;
 
 import org.aauc.urticariapp.data.Angioedema;
 import org.aauc.urticariapp.data.Level;
+import org.aauc.urticariapp.data.Limitation;
 import org.aauc.urticariapp.data.LogItem;
 import org.aauc.urticariapp.data.LogItemOpenHelper;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.util.Calendar;
 
 public class RegisterLogActivity
 extends Activity
-implements DatePickerDialog.OnDateSetListener,
-           DialogInterface.OnMultiChoiceClickListener {
+implements DatePickerDialog.OnDateSetListener {
 
     private static final int COLOR_SELECTED = Color.argb(50, 0, 103, 159);
     private static final int COLOR_TRANSPARENT = Color.argb(0, 0, 0, 0);
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
     private LogItem item;
     private LogItemOpenHelper helper;
 
@@ -121,7 +128,13 @@ implements DatePickerDialog.OnDateSetListener,
     public void addAngio(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.angio_question)
-                .setMultiChoiceItems(angioItems(), angioItemsStatus(), this)
+                .setMultiChoiceItems(angioItems(), angioItemsStatus(),
+                        new DialogInterface.OnMultiChoiceClickListener() {
+                            @Override
+                            public void onClick(final DialogInterface dialogInterface, final int i, final boolean b) {
+                                saveAngio(i, b);
+                            }
+                        })
                 .setNeutralButton(R.string.close_button, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //closing is fine, nothing to do as it's saved on selection
@@ -146,8 +159,38 @@ implements DatePickerDialog.OnDateSetListener,
         return status;
     }
 
-    public void back(View view) {
-        finish();
+    public void addLimitations(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.limitations_question)
+                .setMultiChoiceItems(limitationItems(), limitationItemsStatus(),
+                        new DialogInterface.OnMultiChoiceClickListener() {
+                            @Override
+                            public void onClick(final DialogInterface dialogInterface, final int i, final boolean b) {
+                                saveLimitations(i, b);
+                            }
+                        })
+                .setNeutralButton(R.string.close_button, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //closing is fine, nothing to do as it's saved on selection
+                    }
+                });
+        builder.create().show();
+    }
+
+    private CharSequence[] limitationItems() {
+        CharSequence[] items = new CharSequence[Limitation.values().length];
+        for (int i = 0; i < items.length; i++) {
+            items[i] = getResources().getText(Limitation.values()[i].toResourceId());
+        }
+        return items;
+    }
+
+    private boolean[] limitationItemsStatus() {
+        boolean[] status = new boolean[Limitation.values().length];
+        for (int i = 0; i < status.length; i++) {
+            status[i] = item.hasLimitation(Limitation.values()[i]);
+        }
+        return status;
     }
 
     @Override
@@ -177,10 +220,18 @@ implements DatePickerDialog.OnDateSetListener,
         updateView();
     }
 
-    @Override
-    public void onClick(final DialogInterface dialogInterface,
-                        final int which,
-                        final boolean checked) {
+    public void saveLimitations(final int which,
+                                final boolean checked) {
+        Limitation limitation = Limitation.values()[which];
+        if (checked) {
+            item.addLimitation(limitation);
+        } else {
+            item.removeLimitation(limitation);
+        }
+    }
+
+    public void saveAngio(final int which,
+                          final boolean checked) {
         Angioedema angio = Angioedema.values()[which];
         if (checked) {
             item.addAngio(angio);

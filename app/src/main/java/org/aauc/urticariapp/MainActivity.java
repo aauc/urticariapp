@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
 
     private static final String AAUC_URL = "http://www.urticariacronica.org/?utm_source=app&utm_medium=app&utm_campaign=logo";
     private static final String MEMBER_URL = "https://docs.google.com/forms/d/13LprW5q24OTfVAMBzx1L3HUsl0uE_6SW8ef5tjlbtvo/viewform";
-    private static final String URTICARIA_URL = "http://www.urticariacronica.org/la-urticariapp/?utm_source=app&utm_medium=app&utm_campaign=urticariapp";
+    private static final String URTICARIA_URL = "http://www.urticariacronica.org/la-urticaria/?utm_source=app&utm_medium=app&utm_campaign=urticariapp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

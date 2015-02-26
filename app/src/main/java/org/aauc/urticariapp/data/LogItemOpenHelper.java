@@ -14,23 +14,27 @@ import java.util.TimeZone;
 
 public class LogItemOpenHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String LOG_ITEM_TABLE_NAME = "log_items";
     private static final String DATE = "adate";
     private static final String WHEALS = "wheals";
     private static final String ITCH = "itch";
-    private static final String ANGIO = "angio";
     private static final String NOTE = "note";
-    private static final String[] ALL_FIELDS = new String[] { DATE, WHEALS, ITCH, NOTE, ANGIO };
+    private static final String ANGIO = "angio";
+    private static final String PICTURE = "picture";
+    private static final String LIMITATIONS = "limits";
+    private static final String[] ALL_FIELDS = new String[] { DATE, WHEALS, ITCH, NOTE, ANGIO, PICTURE, LIMITATIONS };
     private static final String LOG_ITEM_TABLE_CREATE =
                 "CREATE TABLE " + LOG_ITEM_TABLE_NAME + " (" +
                 DATE + " INT PRIMARY KEY, " +
                 WHEALS + " TINYINT, " +
                 ITCH + " TINYINT, " +
                 NOTE + " TEXT, " +
-                ANGIO + " TEXT);";
+                ANGIO + " TEXT, " +
+                PICTURE + " TEXT, " +
+                LIMITATIONS + " TEXT);";
     private static final String DATABASE_NAME = "urticariapp";
-    private static final String ANGIO_SEPARATOR = ",";
+    private static final String FIELD_SEPARATOR = ",";
 
     public LogItemOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -43,7 +47,12 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        if (oldVersion == 1 && newVersion == 2) {
+            db.execSQL("ALTER TABLE " + LOG_ITEM_TABLE_NAME +
+                    " ADD COLUMN " + PICTURE + " TEXT DEFAULT NULL");
+            db.execSQL("ALTER TABLE " + LOG_ITEM_TABLE_NAME +
+                    " ADD COLUMN " + LIMITATIONS + " TEXT DEFAULT NULL");
+        }
     }
 
     public LogItem findOrCreateLogItem(int year, int month, int day) {
@@ -79,11 +88,15 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
         int itchOrdinal = cursor.getInt(2);
         String note = cursor.getString(3);
         Set<Angioedema> angio = decodeAngio(cursor.getString(4));
+        String picture = cursor.getString(5);
+        Set<Limitation> limitations = decodeLimitations(cursor.getString(6));
         return new LogItem(date,
                            Level.values()[whealsOrdinal],
                            Level.values()[itchOrdinal],
                            note,
-                           angio);
+                           angio,
+                           picture,
+                           limitations);
     }
 
     private Calendar decodeDate(final long millis) {
@@ -94,7 +107,7 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
 
     private Set<Angioedema> decodeAngio(final String raw) {
         Set<Angioedema> result = new HashSet<Angioedema>();
-        for (String angio : raw.split(ANGIO_SEPARATOR)) {
+        for (String angio : raw.split(FIELD_SEPARATOR)) {
             try {
                 Angioedema val = Angioedema.valueOf(angio);
                 result.add(val);
@@ -109,11 +122,32 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
         StringBuilder encoded = new StringBuilder();
         for (Angioedema elem : angio) {
             encoded.append(elem.toString());
-            encoded.append(ANGIO_SEPARATOR);
+            encoded.append(FIELD_SEPARATOR);
         }
         return encoded.toString();
     }
 
+    private Set<Limitation> decodeLimitations(final String raw) {
+        Set<Limitation> result = new HashSet<Limitation>();
+        for (String limitation : raw.split(FIELD_SEPARATOR)) {
+            try {
+                Limitation val = Limitation.valueOf(limitation);
+                result.add(val);
+            } catch (IllegalArgumentException iae) {
+                //No constant found, usually that's because of an empty one, ignore it
+            }
+        }
+        return result;
+    }
+
+    private String encodeLimitations(final Set<Limitation> limitations) {
+        StringBuilder encoded = new StringBuilder();
+        for (Limitation elem : limitations) {
+            encoded.append(elem.toString());
+            encoded.append(FIELD_SEPARATOR);
+        }
+        return encoded.toString();
+    }
 
     private String encodeDate(final Calendar when) {
         return "" + (normaliseDate(when).getTimeInMillis() / 1000);
@@ -134,9 +168,11 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
                                       item.getWheals().ordinal(),
                                       item.getItch().ordinal(),
                                       item.getNote(),
-                                      encodeAngio(item.getAngio())};
+                                      encodeAngio(item.getAngio()),
+                                      item.getPicture(),
+                                      encodeLimitations(item.getLimitations())};
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("REPLACE INTO " + LOG_ITEM_TABLE_NAME + " VALUES (?, ?, ?, ?, ?)", args);
+        db.execSQL("REPLACE INTO " + LOG_ITEM_TABLE_NAME + " VALUES (?, ?, ?, ?, ?, ?, ?)", args);
     }
 
     public List<LogItem> selectLogItems() {

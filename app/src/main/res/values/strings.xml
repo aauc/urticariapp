@@ -22,7 +22,6 @@
     <string name="note_title">Nota</string>
     <string name="log_angio">Angioedema</string>
     <string name="add_photo">Foto</string>
-    <string name="back">Volver</string>
     <string name="note_hint">Introduce aquí el comentario que desees.</string>
     <string name="save">Guardar</string>
     <string name="cancel">Cancelar</string>
@@ -77,4 +76,14 @@
         para mejorar la aplicación.
         \n¡Gracias!
     </string>
+    <string name="limitations">Limitaciones</string>
+    <string name="limit_work">Trabajar</string>
+    <string name="limit_sport">Deporte</string>
+    <string name="limit_hobby">Hobby</string>
+    <string name="limit_clothing">Ropa</string>
+    <string name="limit_leisure">Ocio</string>
+    <string name="limit_sleep">Dormir</string>
+    <string name="limit_social">Socializar</string>
+    <string name="limit_sex">Vida sexual</string>
+    <string name="limitations_question">¿En qué  te ha limitado la urticaria?</string>
 </resources>

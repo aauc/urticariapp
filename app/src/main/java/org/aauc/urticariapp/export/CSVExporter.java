@@ -5,6 +5,7 @@ import android.os.Environment;
 
 import org.aauc.urticariapp.R;
 import org.aauc.urticariapp.data.Angioedema;
+import org.aauc.urticariapp.data.Limitation;
 import org.aauc.urticariapp.data.LogItem;
 
 import java.io.BufferedWriter;
@@ -32,8 +33,7 @@ public class CSVExporter {
     }
 
     private File createOutputFile(final String filename) {
-        File docs = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-        File outputDir = new File(docs, "aauc/");
+        File outputDir = Environment.getExternalStoragePublicDirectory("aauc/");
         outputDir.mkdirs();
         return new File(outputDir, filename);
     }
@@ -49,7 +49,8 @@ public class CSVExporter {
                              wheals+ "," +
                              itch + "," +
                              (wheals + itch) + "," +
-                             formatAngioedemaCSV(item.getAngio()) + ",\"" +
+                             formatAngioedemaCSV(item.getAngio()) + "," +
+                             formatLimitationsCSV(item.getLimitations()) + ",\"" +
                              item.getNote() + "\"\n");
             }
             writer.flush();
@@ -64,7 +65,18 @@ public class CSVExporter {
         result.append('"');
         for (Angioedema item : angio) {
             result.append(textResource(item.toResourceId()))
-                    .append('\n');
+                  .append('\n');
+        }
+        result.append('"');
+        return result.toString();
+    }
+
+    private String formatLimitationsCSV(final Set<Limitation> limitations) {
+        StringBuilder result = new StringBuilder();
+        result.append('"');
+        for (Limitation item : limitations) {
+            result.append(textResource(item.toResourceId()))
+                  .append('\n');
         }
         result.append('"');
         return result.toString();
