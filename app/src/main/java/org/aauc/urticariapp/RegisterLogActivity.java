@@ -4,13 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -24,7 +19,6 @@ import org.aauc.urticariapp.data.Limitation;
 import org.aauc.urticariapp.data.LogItem;
 import org.aauc.urticariapp.data.LogItemOpenHelper;
 
-import java.io.File;
 import java.text.DateFormat;
 import java.util.Calendar;
 
@@ -34,15 +28,18 @@ implements DatePickerDialog.OnDateSetListener {
 
     private static final int COLOR_SELECTED = Color.argb(50, 0, 103, 159);
     private static final int COLOR_TRANSPARENT = Color.argb(0, 0, 0, 0);
-    private static final int REQUEST_IMAGE_CAPTURE = 1;
     private LogItem item;
     private LogItemOpenHelper helper;
+    private Toast futureDayToast;
+    private Toast photoToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         helper = new LogItemOpenHelper(getApplicationContext());
         item = helper.findOrCreateLogItem();
+        photoToast = Toast.makeText(getApplicationContext(), R.string.not_yet, Toast.LENGTH_SHORT);
+        futureDayToast = Toast.makeText(getApplicationContext(), R.string.future_day, Toast.LENGTH_SHORT);
         setContentView(R.layout.activity_register_log);
         updateView();
     }
@@ -98,6 +95,7 @@ implements DatePickerDialog.OnDateSetListener {
         int month = c.get(Calendar.MONTH);
         int day = c.get(Calendar.DAY_OF_MONTH);
         DatePickerDialog dialog = new DatePickerDialog(this, this, year, month, day);
+        dialog.getDatePicker().setMaxDate(c.getTimeInMillis());
         dialog.show();
     }
 
@@ -122,7 +120,7 @@ implements DatePickerDialog.OnDateSetListener {
     }
 
     public void addPhoto(View view) {
-        Toast.makeText(getApplicationContext(), R.string.not_yet, Toast.LENGTH_SHORT).show();
+        photoToast.show();
     }
 
     public void addAngio(View view) {
@@ -210,14 +208,24 @@ implements DatePickerDialog.OnDateSetListener {
 
     private void changeDate(Calendar newDate) {
         changeDate(newDate.get(Calendar.YEAR),
-                   newDate.get(Calendar.MONTH),
-                   newDate.get(Calendar.DAY_OF_MONTH));
-        updateView();
+                newDate.get(Calendar.MONTH),
+                newDate.get(Calendar.DAY_OF_MONTH));
     }
 
     private void changeDate(int year, int month, int day) {
-        item = helper.findOrCreateLogItem(year, month, day);
-        updateView();
+        if (validDate(year, month, day)) {
+            item = helper.findOrCreateLogItem(year, month, day);
+            updateView();
+        } else {
+            futureDayToast.show();
+        }
+    }
+
+    private boolean validDate(final int year, final int month, final int day) {
+        Calendar now = Calendar.getInstance();
+        Calendar toSet = Calendar.getInstance();
+        toSet.set(year, month, day, 0, 0 , 0);
+        return toSet.before(now);
     }
 
     public void saveLimitations(final int which,

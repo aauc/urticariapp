@@ -9,8 +9,8 @@ android {
         applicationId "org.aauc.urticariapp"
         minSdkVersion 15
         targetSdkVersion 20
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.1.1"
     }
     buildTypes {
         release {

@@ -41,8 +41,11 @@ public class HistoryActivity extends Activity implements CalendarPickerView.OnDa
 
         exporter = new CSVExporter(getResources());
 
+        Calendar maxDate = Calendar.getInstance();
+        maxDate.add(Calendar.DAY_OF_MONTH, 1);
+
         LogItemOpenHelper helper = new LogItemOpenHelper(getApplicationContext());
-        List<LogItem> items = helper.selectLogItems();
+        List<LogItem> items = helper.selectLogItems(maxDate);
         List<Date> dates = new LinkedList<Date>();
         indexedItems = new HashMap<Date, LogItem>();
         for (LogItem item : items) {
@@ -55,9 +58,6 @@ public class HistoryActivity extends Activity implements CalendarPickerView.OnDa
             minDate.setTime(dates.get(0));
         }
         minDate.set(Calendar.DAY_OF_MONTH, 1);
-
-        Calendar maxDate = Calendar.getInstance();
-        maxDate.add(Calendar.DAY_OF_MONTH, 1);
 
         CalendarPickerView calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
         calendar.init(minDate.getTime(), maxDate.getTime());

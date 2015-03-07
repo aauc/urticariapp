@@ -49,9 +49,9 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion == 1 && newVersion == 2) {
             db.execSQL("ALTER TABLE " + LOG_ITEM_TABLE_NAME +
-                    " ADD COLUMN " + PICTURE + " TEXT DEFAULT NULL");
+                    " ADD COLUMN " + PICTURE + " TEXT DEFAULT ''");
             db.execSQL("ALTER TABLE " + LOG_ITEM_TABLE_NAME +
-                    " ADD COLUMN " + LIMITATIONS + " TEXT DEFAULT NULL");
+                    " ADD COLUMN " + LIMITATIONS + " TEXT DEFAULT ''");
         }
     }
 
@@ -175,9 +175,12 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
         db.execSQL("REPLACE INTO " + LOG_ITEM_TABLE_NAME + " VALUES (?, ?, ?, ?, ?, ?, ?)", args);
     }
 
-    public List<LogItem> selectLogItems() {
-        Cursor cursor = getReadableDatabase().query(LOG_ITEM_TABLE_NAME, ALL_FIELDS,
-                                                    null, null, null, null, DATE + " ASC");
+    public List<LogItem> selectLogItems(final Calendar max) {
+        Cursor cursor = getReadableDatabase().query(LOG_ITEM_TABLE_NAME,
+                ALL_FIELDS,
+                DATE + " <= ? ",
+                new String[]{encodeDate(max)},
+                null, null, DATE + " ASC");
         List<LogItem> items = new LinkedList<LogItem>();
         while (cursor.moveToNext()) {
             LogItem item = createLogItem(cursor);

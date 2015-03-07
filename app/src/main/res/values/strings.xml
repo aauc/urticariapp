@@ -85,4 +85,5 @@
     <string name="limit_sleep">Dormir</string>
     <string name="limit_sex">Vida sexual</string>
     <string name="limitations_question">¿En qué  te ha limitado la urticaria?</string>
+    <string name="future_day">No puedes registrar un día futuro.</string>
 </resources>
