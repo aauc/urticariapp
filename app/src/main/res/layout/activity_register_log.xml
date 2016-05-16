@@ -29,7 +29,6 @@
         android:id="@+id/date"
         android:onClick="selectDate"
         android:clickable="true"
-        android:layout_above="@+id/date"
         />
 
     <Button
