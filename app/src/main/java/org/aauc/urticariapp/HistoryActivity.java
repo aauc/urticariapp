@@ -15,12 +15,12 @@ import org.aauc.urticariapp.data.LogItemOpenHelper;
 import org.aauc.urticariapp.export.CSVExporter;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class HistoryActivity extends Activity implements CalendarPickerView.OnDateSelectedListener {
 
@@ -30,8 +30,7 @@ public class HistoryActivity extends Activity implements CalendarPickerView.OnDa
                                             R.drawable.angio_6, R.drawable.angio_7,
                                             R.drawable.angio_8};
 
-    private HashMap<Date, LogItem> indexedItems;
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    private Map<Long, LogItem> indexedItems;
     private CSVExporter exporter;
 
     @Override
@@ -46,11 +45,11 @@ public class HistoryActivity extends Activity implements CalendarPickerView.OnDa
 
         LogItemOpenHelper helper = new LogItemOpenHelper(getApplicationContext());
         List<LogItem> items = helper.selectLogItems(maxDate);
-        List<Date> dates = new LinkedList<Date>();
-        indexedItems = new HashMap<Date, LogItem>();
+        List<Date> dates = new LinkedList<>();
+        indexedItems = new HashMap<>();
         for (LogItem item : items) {
             dates.add(item.getDate());
-            indexedItems.put(item.getDate(), item);
+            indexedItems.put(item.getTimeInMillis(), item);
         }
 
         Calendar minDate = Calendar.getInstance();
@@ -106,8 +105,9 @@ public class HistoryActivity extends Activity implements CalendarPickerView.OnDa
 
     @Override
     public void onDateSelected(Date date) {
-        if (indexedItems.containsKey(date)) {
-            LogItem item = indexedItems.get(date);
+        Long normalised = LogItem.normaliseDate(date);
+        if (indexedItems.containsKey(normalised)) {
+            LogItem item = indexedItems.get(normalised);
             String note = item.getNote();
             updateItemInfo(note.isEmpty() ? textResource(R.string.no_note) : note,
                            item.getWheals().toIconId(),

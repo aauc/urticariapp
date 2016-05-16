@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TimeZone;
 
 public class LogItem {
 
@@ -27,13 +28,33 @@ public class LogItem {
         this.wheals = wheals;
         this.itch = itch;
         this.note = note;
-        this.angio = new HashSet<Angioedema>(angio);
+        this.angio = new HashSet<>(angio);
         this.picture = picture;
         this.limitations = limitations;
     }
 
+    public static long normaliseDate(final Date d) {
+        Calendar input = Calendar.getInstance();
+        input.setTime(d);
+        return normaliseDate(input).getTimeInMillis();
+    }
+
+    public static Calendar normaliseDate(final Calendar input) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeZone(TimeZone.getTimeZone("UTC"));
+        cal.setTimeInMillis(0);
+        cal.set(input.get(Calendar.YEAR),
+                input.get(Calendar.MONTH),
+                input.get(Calendar.DAY_OF_MONTH));
+        return cal;
+    }
+
     public Date getDate() {
         return date.getTime();
+    }
+
+    public long getTimeInMillis() {
+        return date.getTimeInMillis();
     }
 
     public Calendar getCalendar() {
@@ -53,7 +74,7 @@ public class LogItem {
     }
 
     public Set<Angioedema> getAngio() {
-        return new HashSet<Angioedema>(angio);
+        return new HashSet<>(angio);
     }
 
     public void setWheals(final Level wheals) {

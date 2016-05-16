@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.Calendar;
 import java.util.HashSet;
@@ -76,7 +77,6 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
             item = createLogItem(cursor);
         } else {
             item = new LogItem(when);
-            item.setHelper(this);
         }
         item.setHelper(this);
         return item;
@@ -99,14 +99,15 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
                            limitations);
     }
 
-    private Calendar decodeDate(final long millis) {
+    private Calendar decodeDate(final long seconds) {
         Calendar date = Calendar.getInstance();
-        date.setTimeInMillis(millis * 1000);
+        date.setTimeZone(TimeZone.getTimeZone("UTC"));
+        date.setTimeInMillis(seconds * 1000);
         return date;
     }
 
     private Set<Angioedema> decodeAngio(final String raw) {
-        Set<Angioedema> result = new HashSet<Angioedema>();
+        Set<Angioedema> result = new HashSet<>();
         for (String angio : raw.split(FIELD_SEPARATOR)) {
             try {
                 Angioedema val = Angioedema.valueOf(angio);
@@ -128,7 +129,7 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
     }
 
     private Set<Limitation> decodeLimitations(final String raw) {
-        Set<Limitation> result = new HashSet<Limitation>();
+        Set<Limitation> result = new HashSet<>();
         for (String limitation : raw.split(FIELD_SEPARATOR)) {
             try {
                 Limitation val = Limitation.valueOf(limitation);
@@ -150,17 +151,7 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
     }
 
     private String encodeDate(final Calendar when) {
-        return "" + (normaliseDate(when).getTimeInMillis() / 1000);
-    }
-
-    private Calendar normaliseDate(final Calendar input) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTimeZone(TimeZone.getTimeZone("UTC"));
-        cal.setTimeInMillis(0);
-        cal.set(input.get(Calendar.YEAR),
-                input.get(Calendar.MONTH),
-                input.get(Calendar.DAY_OF_MONTH));
-        return cal;
+        return "" + (LogItem.normaliseDate(when).getTimeInMillis() / 1000);
     }
 
     void save(final LogItem item) {
@@ -181,7 +172,7 @@ public class LogItemOpenHelper extends SQLiteOpenHelper {
                 DATE + " <= ? ",
                 new String[]{encodeDate(max)},
                 null, null, DATE + " ASC");
-        List<LogItem> items = new LinkedList<LogItem>();
+        List<LogItem> items = new LinkedList<>();
         while (cursor.moveToNext()) {
             LogItem item = createLogItem(cursor);
             item.setHelper(this);

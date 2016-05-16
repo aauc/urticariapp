@@ -60,7 +60,7 @@ implements DatePickerDialog.OnDateSetListener {
         for (Level level : Level.values()) {
             int id = level.toWhealsId();
             int bg = (id == selectedId) ? COLOR_SELECTED : COLOR_TRANSPARENT;
-            ((Button) this.findViewById(id)).setBackgroundColor(bg);
+            this.findViewById(id).setBackgroundColor(bg);
         }
     }
 
@@ -69,7 +69,7 @@ implements DatePickerDialog.OnDateSetListener {
         for (Level level : Level.values()) {
             int id = level.toItchId();
             int bg = (id == selectedId) ? COLOR_SELECTED : COLOR_TRANSPARENT;
-            ((Button) this.findViewById(id)).setBackgroundColor(bg);
+            this.findViewById(id).setBackgroundColor(bg);
         }
     }
 

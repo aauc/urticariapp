@@ -14,6 +14,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Set;
@@ -21,7 +22,8 @@ import java.util.Set;
 public class CSVExporter {
 
     private final Resources resources;
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    private DateFormat dateFormat = SimpleDateFormat.getDateInstance();
+
 
     public CSVExporter(final Resources resources) {
         this.resources = resources;
