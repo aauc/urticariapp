@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD97E2E01D94356500F8D06C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E2DF1D94356500F8D06C /* main.m */; };
+		CD97E2E31D94356600F8D06C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E2E21D94356600F8D06C /* AppDelegate.m */; };
+		CD97E2EC1D94356900F8D06C /* urticariapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD97E2EA1D94356900F8D06C /* urticariapp.xcdatamodeld */; };
+		CD97E2EE1D94356900F8D06C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD97E2ED1D94356900F8D06C /* Assets.xcassets */; };
+		CD97E2F11D94356900F8D06C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD97E2EF1D94356900F8D06C /* LaunchScreen.storyboard */; };
+		CD97E2FC1D94356E00F8D06C /* urticariappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E2FB1D94356E00F8D06C /* urticariappTests.m */; };
+		CD97E3071D94356F00F8D06C /* urticariappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E3061D94356F00F8D06C /* urticariappUITests.m */; };
+		CD97E31A1D943B2000F8D06C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD97E31C1D943B2000F8D06C /* Localizable.strings */; };
+		CD97E3231D943CBF00F8D06C /* RegisterActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E3211D943CBF00F8D06C /* RegisterActivityViewController.m */; };
+		CD97E3241D943CBF00F8D06C /* RegisterActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD97E3221D943CBF00F8D06C /* RegisterActivityViewController.xib */; };
+		CD97E3281D95112800F8D06C /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E3261D95112700F8D06C /* HistoryViewController.m */; };
+		CD97E3291D95112800F8D06C /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD97E3271D95112700F8D06C /* HistoryViewController.xib */; };
+		CD97E32D1D9513A600F8D06C /* UrticariaWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E32B1D9513A600F8D06C /* UrticariaWebViewController.m */; };
+		CD97E32E1D9513A600F8D06C /* UrticariaWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD97E32C1D9513A600F8D06C /* UrticariaWebViewController.xib */; };
+		CD97E3321D95150C00F8D06C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E3301D95150C00F8D06C /* HomeViewController.m */; };
+		CD97E3331D95150C00F8D06C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD97E3311D95150C00F8D06C /* HomeViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD97E2F81D94356E00F8D06C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD97E2D31D94356500F8D06C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD97E2DA1D94356500F8D06C;
+			remoteInfo = urticariapp;
+		};
+		CD97E3031D94356F00F8D06C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD97E2D31D94356500F8D06C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD97E2DA1D94356500F8D06C;
+			remoteInfo = urticariapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD97E2DB1D94356500F8D06C /* urticariapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = urticariapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD97E2DF1D94356500F8D06C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD97E2E11D94356600F8D06C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD97E2E21D94356600F8D06C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD97E2EB1D94356900F8D06C /* urticariapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = urticariapp.xcdatamodel; sourceTree = "<group>"; };
+		CD97E2ED1D94356900F8D06C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD97E2F01D94356900F8D06C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD97E2F21D94356A00F8D06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD97E2F71D94356E00F8D06C /* urticariappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = urticariappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD97E2FB1D94356E00F8D06C /* urticariappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = urticariappTests.m; sourceTree = "<group>"; };
+		CD97E2FD1D94356F00F8D06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD97E3021D94356F00F8D06C /* urticariappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = urticariappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD97E3061D94356F00F8D06C /* urticariappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = urticariappUITests.m; sourceTree = "<group>"; };
+		CD97E3081D94356F00F8D06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD97E31B1D943B2000F8D06C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD97E31E1D943B4300F8D06C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CD97E31F1D943B4300F8D06C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD97E3201D943CBF00F8D06C /* RegisterActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterActivityViewController.h; path = Views/RegisterActivityViewController.h; sourceTree = "<group>"; };
+		CD97E3211D943CBF00F8D06C /* RegisterActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterActivityViewController.m; path = Views/RegisterActivityViewController.m; sourceTree = "<group>"; };
+		CD97E3221D943CBF00F8D06C /* RegisterActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterActivityViewController.xib; path = Views/RegisterActivityViewController.xib; sourceTree = "<group>"; };
+		CD97E3251D95112700F8D06C /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = Views/HistoryViewController.h; sourceTree = "<group>"; };
+		CD97E3261D95112700F8D06C /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = Views/HistoryViewController.m; sourceTree = "<group>"; };
+		CD97E3271D95112700F8D06C /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryViewController.xib; path = Views/HistoryViewController.xib; sourceTree = "<group>"; };
+		CD97E32A1D9513A600F8D06C /* UrticariaWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UrticariaWebViewController.h; path = Views/UrticariaWebViewController.h; sourceTree = "<group>"; };
+		CD97E32B1D9513A600F8D06C /* UrticariaWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UrticariaWebViewController.m; path = Views/UrticariaWebViewController.m; sourceTree = "<group>"; };
+		CD97E32C1D9513A600F8D06C /* UrticariaWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UrticariaWebViewController.xib; path = Views/UrticariaWebViewController.xib; sourceTree = "<group>"; };
+		CD97E32F1D95150C00F8D06C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Views/HomeViewController.h; sourceTree = "<group>"; };
+		CD97E3301D95150C00F8D06C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Views/HomeViewController.m; sourceTree = "<group>"; };
+		CD97E3311D95150C00F8D06C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Views/HomeViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD97E2D81D94356500F8D06C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD97E2F41D94356E00F8D06C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD97E2FF1D94356F00F8D06C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD97E2D21D94356500F8D06C = {
+			isa = PBXGroup;
+			children = (
+				CD97E2DD1D94356500F8D06C /* urticariapp */,
+				CD97E2FA1D94356E00F8D06C /* urticariappTests */,
+				CD97E3051D94356F00F8D06C /* urticariappUITests */,
+				CD97E2DC1D94356500F8D06C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD97E2DC1D94356500F8D06C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD97E2DB1D94356500F8D06C /* urticariapp.app */,
+				CD97E2F71D94356E00F8D06C /* urticariappTests.xctest */,
+				CD97E3021D94356F00F8D06C /* urticariappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD97E2DD1D94356500F8D06C /* urticariapp */ = {
+			isa = PBXGroup;
+			children = (
+				CD97E2E11D94356600F8D06C /* AppDelegate.h */,
+				CD97E2E21D94356600F8D06C /* AppDelegate.m */,
+				CD97E2ED1D94356900F8D06C /* Assets.xcassets */,
+				CD97E2EF1D94356900F8D06C /* LaunchScreen.storyboard */,
+				CD97E2F21D94356A00F8D06C /* Info.plist */,
+				CD97E3141D9435C500F8D06C /* Views */,
+				CD97E2EA1D94356900F8D06C /* urticariapp.xcdatamodeld */,
+				CD97E2DE1D94356500F8D06C /* Supporting Files */,
+			);
+			path = urticariapp;
+			sourceTree = "<group>";
+		};
+		CD97E2DE1D94356500F8D06C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD97E2DF1D94356500F8D06C /* main.m */,
+				CD97E31C1D943B2000F8D06C /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD97E2FA1D94356E00F8D06C /* urticariappTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD97E2FB1D94356E00F8D06C /* urticariappTests.m */,
+				CD97E2FD1D94356F00F8D06C /* Info.plist */,
+			);
+			path = urticariappTests;
+			sourceTree = "<group>";
+		};
+		CD97E3051D94356F00F8D06C /* urticariappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD97E3061D94356F00F8D06C /* urticariappUITests.m */,
+				CD97E3081D94356F00F8D06C /* Info.plist */,
+			);
+			path = urticariappUITests;
+			sourceTree = "<group>";
+		};
+		CD97E3141D9435C500F8D06C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD97E3251D95112700F8D06C /* HistoryViewController.h */,
+				CD97E3261D95112700F8D06C /* HistoryViewController.m */,
+				CD97E3271D95112700F8D06C /* HistoryViewController.xib */,
+				CD97E32F1D95150C00F8D06C /* HomeViewController.h */,
+				CD97E3301D95150C00F8D06C /* HomeViewController.m */,
+				CD97E3311D95150C00F8D06C /* HomeViewController.xib */,
+				CD97E3201D943CBF00F8D06C /* RegisterActivityViewController.h */,
+				CD97E3211D943CBF00F8D06C /* RegisterActivityViewController.m */,
+				CD97E3221D943CBF00F8D06C /* RegisterActivityViewController.xib */,
+				CD97E32A1D9513A600F8D06C /* UrticariaWebViewController.h */,
+				CD97E32B1D9513A600F8D06C /* UrticariaWebViewController.m */,
+				CD97E32C1D9513A600F8D06C /* UrticariaWebViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD97E2DA1D94356500F8D06C /* urticariapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD97E30B1D94356F00F8D06C /* Build configuration list for PBXNativeTarget "urticariapp" */;
+			buildPhases = (
+				CD97E2D71D94356500F8D06C /* Sources */,
+				CD97E2D81D94356500F8D06C /* Frameworks */,
+				CD97E2D91D94356500F8D06C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = urticariapp;
+			productName = urticariapp;
+			productReference = CD97E2DB1D94356500F8D06C /* urticariapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD97E2F61D94356E00F8D06C /* urticariappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD97E30E1D94356F00F8D06C /* Build configuration list for PBXNativeTarget "urticariappTests" */;
+			buildPhases = (
+				CD97E2F31D94356E00F8D06C /* Sources */,
+				CD97E2F41D94356E00F8D06C /* Frameworks */,
+				CD97E2F51D94356E00F8D06C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD97E2F91D94356E00F8D06C /* PBXTargetDependency */,
+			);
+			name = urticariappTests;
+			productName = urticariappTests;
+			productReference = CD97E2F71D94356E00F8D06C /* urticariappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD97E3011D94356F00F8D06C /* urticariappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD97E3111D94356F00F8D06C /* Build configuration list for PBXNativeTarget "urticariappUITests" */;
+			buildPhases = (
+				CD97E2FE1D94356F00F8D06C /* Sources */,
+				CD97E2FF1D94356F00F8D06C /* Frameworks */,
+				CD97E3001D94356F00F8D06C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD97E3041D94356F00F8D06C /* PBXTargetDependency */,
+			);
+			name = urticariappUITests;
+			productName = urticariappUITests;
+			productReference = CD97E3021D94356F00F8D06C /* urticariappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD97E2D31D94356500F8D06C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = aauc;
+				TargetAttributes = {
+					CD97E2DA1D94356500F8D06C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					CD97E2F61D94356E00F8D06C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CD97E2DA1D94356500F8D06C;
+					};
+					CD97E3011D94356F00F8D06C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CD97E2DA1D94356500F8D06C;
+					};
+				};
+			};
+			buildConfigurationList = CD97E2D61D94356500F8D06C /* Build configuration list for PBXProject "urticariapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = CD97E2D21D94356500F8D06C;
+			productRefGroup = CD97E2DC1D94356500F8D06C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD97E2DA1D94356500F8D06C /* urticariapp */,
+				CD97E2F61D94356E00F8D06C /* urticariappTests */,
+				CD97E3011D94356F00F8D06C /* urticariappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD97E2D91D94356500F8D06C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD97E2F11D94356900F8D06C /* LaunchScreen.storyboard in Resources */,
+				CD97E31A1D943B2000F8D06C /* Localizable.strings in Resources */,
+				CD97E2EE1D94356900F8D06C /* Assets.xcassets in Resources */,
+				CD97E3241D943CBF00F8D06C /* RegisterActivityViewController.xib in Resources */,
+				CD97E32E1D9513A600F8D06C /* UrticariaWebViewController.xib in Resources */,
+				CD97E3291D95112800F8D06C /* HistoryViewController.xib in Resources */,
+				CD97E3331D95150C00F8D06C /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD97E2F51D94356E00F8D06C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD97E3001D94356F00F8D06C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD97E2D71D94356500F8D06C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD97E2EC1D94356900F8D06C /* urticariapp.xcdatamodeld in Sources */,
+				CD97E2E31D94356600F8D06C /* AppDelegate.m in Sources */,
+				CD97E3231D943CBF00F8D06C /* RegisterActivityViewController.m in Sources */,
+				CD97E2E01D94356500F8D06C /* main.m in Sources */,
+				CD97E32D1D9513A600F8D06C /* UrticariaWebViewController.m in Sources */,
+				CD97E3281D95112800F8D06C /* HistoryViewController.m in Sources */,
+				CD97E3321D95150C00F8D06C /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD97E2F31D94356E00F8D06C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD97E2FC1D94356E00F8D06C /* urticariappTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD97E2FE1D94356F00F8D06C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD97E3071D94356F00F8D06C /* urticariappUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD97E2F91D94356E00F8D06C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD97E2DA1D94356500F8D06C /* urticariapp */;
+			targetProxy = CD97E2F81D94356E00F8D06C /* PBXContainerItemProxy */;
+		};
+		CD97E3041D94356F00F8D06C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD97E2DA1D94356500F8D06C /* urticariapp */;
+			targetProxy = CD97E3031D94356F00F8D06C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD97E2EF1D94356900F8D06C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD97E2F01D94356900F8D06C /* Base */,
+				CD97E31E1D943B4300F8D06C /* es */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CD97E31C1D943B2000F8D06C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD97E31B1D943B2000F8D06C /* en */,
+				CD97E31F1D943B4300F8D06C /* es */,
+			);
+			name = Localizable.strings;
+			path = i18n;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD97E3091D94356F00F8D06C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD97E30A1D94356F00F8D06C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD97E30C1D94356F00F8D06C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = urticariapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aauc.urticariapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD97E30D1D94356F00F8D06C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = urticariapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aauc.urticariapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD97E30F1D94356F00F8D06C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = urticariappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aauc.urticariappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/urticariapp.app/urticariapp";
+			};
+			name = Debug;
+		};
+		CD97E3101D94356F00F8D06C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = urticariappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aauc.urticariappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/urticariapp.app/urticariapp";
+			};
+			name = Release;
+		};
+		CD97E3121D94356F00F8D06C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = urticariappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aauc.urticariappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = urticariapp;
+			};
+			name = Debug;
+		};
+		CD97E3131D94356F00F8D06C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = urticariappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.aauc.urticariappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = urticariapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD97E2D61D94356500F8D06C /* Build configuration list for PBXProject "urticariapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD97E3091D94356F00F8D06C /* Debug */,
+				CD97E30A1D94356F00F8D06C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD97E30B1D94356F00F8D06C /* Build configuration list for PBXNativeTarget "urticariapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD97E30C1D94356F00F8D06C /* Debug */,
+				CD97E30D1D94356F00F8D06C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD97E30E1D94356F00F8D06C /* Build configuration list for PBXNativeTarget "urticariappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD97E30F1D94356F00F8D06C /* Debug */,
+				CD97E3101D94356F00F8D06C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD97E3111D94356F00F8D06C /* Build configuration list for PBXNativeTarget "urticariappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD97E3121D94356F00F8D06C /* Debug */,
+				CD97E3131D94356F00F8D06C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD97E2EA1D94356900F8D06C /* urticariapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD97E2EB1D94356900F8D06C /* urticariapp.xcdatamodel */,
+			);
+			currentVersion = CD97E2EB1D94356900F8D06C /* urticariapp.xcdatamodel */;
+			path = urticariapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CD97E2D31D94356500F8D06C /* Project object */;
+}
