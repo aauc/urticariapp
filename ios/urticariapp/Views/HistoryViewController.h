@@ -6,8 +6,8 @@
 //  Copyright © 2016 aauc. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface HistoryViewController : ViewController
+@interface HistoryViewController : UIViewController
 
 @end

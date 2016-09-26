@@ -23,6 +23,7 @@
 		CD97E32E1D9513A600F8D06C /* UrticariaWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD97E32C1D9513A600F8D06C /* UrticariaWebViewController.xib */; };
 		CD97E3321D95150C00F8D06C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E3301D95150C00F8D06C /* HomeViewController.m */; };
 		CD97E3331D95150C00F8D06C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD97E3311D95150C00F8D06C /* HomeViewController.xib */; };
+		CD97E3471D99799600F8D06C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD97E3461D99799600F8D06C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		CD97E32F1D95150C00F8D06C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Views/HomeViewController.h; sourceTree = "<group>"; };
 		CD97E3301D95150C00F8D06C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Views/HomeViewController.m; sourceTree = "<group>"; };
 		CD97E3311D95150C00F8D06C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Views/HomeViewController.xib; sourceTree = "<group>"; };
+		CD97E3461D99799600F8D06C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				CD97E3141D9435C500F8D06C /* Views */,
 				CD97E2EA1D94356900F8D06C /* urticariapp.xcdatamodeld */,
 				CD97E2DE1D94356500F8D06C /* Supporting Files */,
+				CD97E3461D99799600F8D06C /* Main.storyboard */,
 			);
 			path = urticariapp;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				CD97E2F11D94356900F8D06C /* LaunchScreen.storyboard in Resources */,
 				CD97E31A1D943B2000F8D06C /* Localizable.strings in Resources */,
 				CD97E2EE1D94356900F8D06C /* Assets.xcassets in Resources */,
+				CD97E3471D99799600F8D06C /* Main.storyboard in Resources */,
 				CD97E3241D943CBF00F8D06C /* RegisterActivityViewController.xib in Resources */,
 				CD97E32E1D9513A600F8D06C /* UrticariaWebViewController.xib in Resources */,
 				CD97E3291D95112800F8D06C /* HistoryViewController.xib in Resources */,
@@ -563,6 +567,7 @@
 				CD97E30D1D94356F00F8D06C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD97E30E1D94356F00F8D06C /* Build configuration list for PBXNativeTarget "urticariappTests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +576,7 @@
 				CD97E3101D94356F00F8D06C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD97E3111D94356F00F8D06C /* Build configuration list for PBXNativeTarget "urticariappUITests" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +585,7 @@
 				CD97E3131D94356F00F8D06C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
