@@ -5,10 +5,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UrticariaWebViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JoinUsViewController">
             <connections>
-                <outlet property="urticariaWebActivityIndicator" destination="WYB-bG-t4j" id="Fyn-W0-DKK"/>
-                <outlet property="urticariaWebView" destination="Lod-y1-WEw" id="fBt-ON-4z0"/>
+                <outlet property="joinUsActivityIndicator" destination="Na9-NR-foU" id="vE9-z5-H2k"/>
+                <outlet property="joinUsWebView" destination="xfq-qR-NIp" id="4TR-si-Pwy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,20 +17,20 @@
             <rect key="frame" x="0.0" y="64" width="375" height="603"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lod-y1-WEw" userLabel="urticariaWebView">
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-qR-NIp" userLabel="joinUsWebView">
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </webView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WYB-bG-t4j" userLabel="urticariaWevActivityIndicator">
-                    <frame key="frameInset" minX="177" minY="291" width="20" height="20"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Na9-NR-foU" userLabel="joinUsActivityIndicator">
+                    <frame key="frameInset" minX="178" minY="292" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Lod-y1-WEw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6RQ-0l-fQC"/>
-                <constraint firstItem="Lod-y1-WEw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="F2z-Ht-0oU"/>
-                <constraint firstAttribute="bottom" secondItem="Lod-y1-WEw" secondAttribute="bottom" id="Inx-4p-38B"/>
-                <constraint firstAttribute="trailing" secondItem="Lod-y1-WEw" secondAttribute="trailing" id="rSp-Pf-TzO"/>
+                <constraint firstItem="xfq-qR-NIp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3eu-zU-o5C"/>
+                <constraint firstAttribute="trailing" secondItem="xfq-qR-NIp" secondAttribute="trailing" id="Qr2-Gi-zbC"/>
+                <constraint firstItem="xfq-qR-NIp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZRY-Ew-ZuJ"/>
+                <constraint firstAttribute="bottom" secondItem="xfq-qR-NIp" secondAttribute="bottom" id="eTM-fP-aRm"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <point key="canvasLocation" x="24.5" y="52.5"/>

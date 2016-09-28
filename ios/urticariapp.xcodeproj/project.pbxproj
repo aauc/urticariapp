@@ -24,6 +24,9 @@
 		CD97E3321D95150C00F8D06C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E3301D95150C00F8D06C /* HomeViewController.m */; };
 		CD97E3331D95150C00F8D06C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD97E3311D95150C00F8D06C /* HomeViewController.xib */; };
 		CD97E3471D99799600F8D06C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD97E3461D99799600F8D06C /* Main.storyboard */; };
+		CDAB9BD01D9BB8A400893C69 /* UrticariaAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB9BCF1D9BB8A400893C69 /* UrticariaAppConfiguration.m */; };
+		CDAB9BD41D9BC31300893C69 /* JoinUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB9BD21D9BC31300893C69 /* JoinUsViewController.m */; };
+		CDAB9BD51D9BC31300893C69 /* JoinUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAB9BD31D9BC31300893C69 /* JoinUsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,11 @@
 		CD97E3301D95150C00F8D06C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Views/HomeViewController.m; sourceTree = "<group>"; };
 		CD97E3311D95150C00F8D06C /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Views/HomeViewController.xib; sourceTree = "<group>"; };
 		CD97E3461D99799600F8D06C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CDAB9BCE1D9BB8A400893C69 /* UrticariaAppConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UrticariaAppConfiguration.h; path = Services/UrticariaAppConfiguration.h; sourceTree = "<group>"; };
+		CDAB9BCF1D9BB8A400893C69 /* UrticariaAppConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UrticariaAppConfiguration.m; path = Services/UrticariaAppConfiguration.m; sourceTree = "<group>"; };
+		CDAB9BD11D9BC31300893C69 /* JoinUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JoinUsViewController.h; path = Views/JoinUsViewController.h; sourceTree = "<group>"; };
+		CDAB9BD21D9BC31300893C69 /* JoinUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JoinUsViewController.m; path = Views/JoinUsViewController.m; sourceTree = "<group>"; };
+		CDAB9BD31D9BC31300893C69 /* JoinUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JoinUsViewController.xib; path = Views/JoinUsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,7 @@
 				CD97E2ED1D94356900F8D06C /* Assets.xcassets */,
 				CD97E2EF1D94356900F8D06C /* LaunchScreen.storyboard */,
 				CD97E2F21D94356A00F8D06C /* Info.plist */,
+				CDAB9BCD1D9BB85200893C69 /* Services */,
 				CD97E3141D9435C500F8D06C /* Views */,
 				CD97E2EA1D94356900F8D06C /* urticariapp.xcdatamodeld */,
 				CD97E2DE1D94356500F8D06C /* Supporting Files */,
@@ -173,6 +182,9 @@
 				CD97E32F1D95150C00F8D06C /* HomeViewController.h */,
 				CD97E3301D95150C00F8D06C /* HomeViewController.m */,
 				CD97E3311D95150C00F8D06C /* HomeViewController.xib */,
+				CDAB9BD11D9BC31300893C69 /* JoinUsViewController.h */,
+				CDAB9BD21D9BC31300893C69 /* JoinUsViewController.m */,
+				CDAB9BD31D9BC31300893C69 /* JoinUsViewController.xib */,
 				CD97E3201D943CBF00F8D06C /* RegisterActivityViewController.h */,
 				CD97E3211D943CBF00F8D06C /* RegisterActivityViewController.m */,
 				CD97E3221D943CBF00F8D06C /* RegisterActivityViewController.xib */,
@@ -181,6 +193,15 @@
 				CD97E32C1D9513A600F8D06C /* UrticariaWebViewController.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		CDAB9BCD1D9BB85200893C69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CDAB9BCE1D9BB8A400893C69 /* UrticariaAppConfiguration.h */,
+				CDAB9BCF1D9BB8A400893C69 /* UrticariaAppConfiguration.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +271,7 @@
 				TargetAttributes = {
 					CD97E2DA1D94356500F8D06C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = HQYS7E3XE5;
 						ProvisioningStyle = Automatic;
 					};
 					CD97E2F61D94356E00F8D06C = {
@@ -291,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD97E2F11D94356900F8D06C /* LaunchScreen.storyboard in Resources */,
+				CDAB9BD51D9BC31300893C69 /* JoinUsViewController.xib in Resources */,
 				CD97E31A1D943B2000F8D06C /* Localizable.strings in Resources */,
 				CD97E2EE1D94356900F8D06C /* Assets.xcassets in Resources */,
 				CD97E3471D99799600F8D06C /* Main.storyboard in Resources */,
@@ -323,8 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD97E2EC1D94356900F8D06C /* urticariapp.xcdatamodeld in Sources */,
+				CDAB9BD41D9BC31300893C69 /* JoinUsViewController.m in Sources */,
 				CD97E2E31D94356600F8D06C /* AppDelegate.m in Sources */,
 				CD97E3231D943CBF00F8D06C /* RegisterActivityViewController.m in Sources */,
+				CDAB9BD01D9BB8A400893C69 /* UrticariaAppConfiguration.m in Sources */,
 				CD97E2E01D94356500F8D06C /* main.m in Sources */,
 				CD97E32D1D9513A600F8D06C /* UrticariaWebViewController.m in Sources */,
 				CD97E3281D95112800F8D06C /* HistoryViewController.m in Sources */,
@@ -482,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HQYS7E3XE5;
 				INFOPLIST_FILE = urticariapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -494,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HQYS7E3XE5;
 				INFOPLIST_FILE = urticariapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

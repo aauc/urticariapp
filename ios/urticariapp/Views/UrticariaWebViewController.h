@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UrticariaWebViewController : UIViewController
+@interface UrticariaWebViewController : UIViewController<UIWebViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIWebView *urticariaWebView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *urticariaWebActivityIndicator;
 
 @end

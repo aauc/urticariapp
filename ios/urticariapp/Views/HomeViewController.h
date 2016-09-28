@@ -10,8 +10,13 @@
 
 @interface HomeViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIButton *clickOnButton;
+@property (strong, nonatomic) IBOutlet UIImageView *logoAAUCImageView;
+@property (strong, nonatomic) IBOutlet UIView *registerView;
+@property (strong, nonatomic) IBOutlet UIView *historyView;
+@property (strong, nonatomic) IBOutlet UIView *urticariaInfoView;
+@property (strong, nonatomic) IBOutlet UIView *joinUsView;
 
-- (IBAction)clickOnButton:(id)sender;
+
+
 
 @end

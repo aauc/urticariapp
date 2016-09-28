@@ -2,40 +2,126 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
-                <outlet property="clickOnButton" destination="xc8-3s-JyF" id="9xO-qU-ILQ"/>
+                <outlet property="historyView" destination="L9a-xT-JZW" id="On4-gc-4g2"/>
+                <outlet property="joinUsView" destination="wJY-4u-dXZ" id="VNU-LK-met"/>
+                <outlet property="logoAAUCImageView" destination="FOR-Ri-X1C" id="jg2-Ed-lw9"/>
+                <outlet property="registerView" destination="U0h-PA-ynS" id="m92-nY-jJm"/>
+                <outlet property="urticariaInfoView" destination="srO-yv-muC" id="cVB-ct-rvw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc8-3s-JyF" userLabel="button">
-                    <color key="backgroundColor" red="1" green="0.78922161443513839" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoAAUC" translatesAutoresizingMaskIntoConstraints="NO" id="FOR-Ri-X1C" userLabel="logoAAUCImageView">
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0h-PA-ynS" userLabel="registerView">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logUAS" translatesAutoresizingMaskIntoConstraints="NO" id="UEd-ek-uUb" userLabel="registerImageView"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrar actividad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-Cm-eGE" userLabel="registerLabel">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.40392156862745099" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="xc8-3s-JyF" secondAttribute="height" multiplier="55:6" id="iEs-wJ-B12"/>
+                        <constraint firstItem="UEd-ek-uUb" firstAttribute="centerX" secondItem="U0h-PA-ynS" secondAttribute="centerX" id="Eaw-UT-r6z"/>
+                        <constraint firstAttribute="bottom" secondItem="yeb-Cm-eGE" secondAttribute="bottom" constant="5" id="LRE-96-nfa"/>
+                        <constraint firstItem="yeb-Cm-eGE" firstAttribute="top" secondItem="UEd-ek-uUb" secondAttribute="bottom" constant="5" id="gXS-La-R0j"/>
+                        <constraint firstItem="UEd-ek-uUb" firstAttribute="top" secondItem="U0h-PA-ynS" secondAttribute="top" constant="5" id="ljr-VI-0aO"/>
+                        <constraint firstItem="yeb-Cm-eGE" firstAttribute="centerX" secondItem="U0h-PA-ynS" secondAttribute="centerX" id="yyW-nI-kKu"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="clickOnButton:" destination="-1" eventType="touchUpInside" id="ETd-CK-Wht"/>
-                    </connections>
-                </button>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9a-xT-JZW" userLabel="historyView">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Fy4-01-0iV" userLabel="historyImageView"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Historial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syo-8L-qKi" userLabel="historyLabel">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Fy4-01-0iV" firstAttribute="top" secondItem="L9a-xT-JZW" secondAttribute="top" constant="5" id="07x-fc-1tk"/>
+                        <constraint firstItem="Syo-8L-qKi" firstAttribute="top" secondItem="Fy4-01-0iV" secondAttribute="bottom" constant="5" id="8nP-0I-M7R"/>
+                        <constraint firstAttribute="bottom" secondItem="Syo-8L-qKi" secondAttribute="bottom" constant="5" id="D79-iv-Pb4"/>
+                        <constraint firstItem="Syo-8L-qKi" firstAttribute="centerX" secondItem="L9a-xT-JZW" secondAttribute="centerX" id="SwN-l6-VVE"/>
+                        <constraint firstItem="Fy4-01-0iV" firstAttribute="centerX" secondItem="L9a-xT-JZW" secondAttribute="centerX" id="bTg-cu-LV1"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srO-yv-muC" userLabel="urticariaInfoView">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="urticariaInfo" translatesAutoresizingMaskIntoConstraints="NO" id="bm2-3t-xFJ" userLabel="urticariaInfoImageView"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Urticaria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHP-76-S7S" userLabel="urticariaInfoLabel">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="bHP-76-S7S" secondAttribute="bottom" constant="5" id="dwp-wm-Lbt"/>
+                        <constraint firstItem="bm2-3t-xFJ" firstAttribute="centerX" secondItem="srO-yv-muC" secondAttribute="centerX" id="ffe-wm-NdQ"/>
+                        <constraint firstItem="bHP-76-S7S" firstAttribute="centerX" secondItem="srO-yv-muC" secondAttribute="centerX" id="rOl-Dv-YBm"/>
+                        <constraint firstItem="bHP-76-S7S" firstAttribute="top" secondItem="bm2-3t-xFJ" secondAttribute="bottom" constant="5" id="u7V-r5-a2G"/>
+                        <constraint firstItem="bm2-3t-xFJ" firstAttribute="top" secondItem="srO-yv-muC" secondAttribute="top" constant="5" id="zPM-po-Qkc"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJY-4u-dXZ" userLabel="joinUsView">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joinUs" translatesAutoresizingMaskIntoConstraints="NO" id="anr-4r-6xV" userLabel="joinUsImageView"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Urticaria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUZ-Q7-DRr" userLabel="joinUsLabel">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="rUZ-Q7-DRr" firstAttribute="top" secondItem="anr-4r-6xV" secondAttribute="bottom" constant="5" id="ONf-fF-6hx"/>
+                        <constraint firstItem="anr-4r-6xV" firstAttribute="top" secondItem="wJY-4u-dXZ" secondAttribute="top" constant="5" id="bah-oA-5kG"/>
+                        <constraint firstAttribute="bottom" secondItem="rUZ-Q7-DRr" secondAttribute="bottom" constant="5" id="cAG-oQ-dM6"/>
+                        <constraint firstItem="anr-4r-6xV" firstAttribute="centerX" secondItem="wJY-4u-dXZ" secondAttribute="centerX" id="gmr-jM-bNr"/>
+                        <constraint firstItem="rUZ-Q7-DRr" firstAttribute="centerX" secondItem="wJY-4u-dXZ" secondAttribute="centerX" id="oCP-Ry-iTK"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="xc8-3s-JyF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FaB-K7-fwz"/>
-                <constraint firstItem="xc8-3s-JyF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="wPC-lI-fR8"/>
-                <constraint firstAttribute="trailing" secondItem="xc8-3s-JyF" secondAttribute="trailing" constant="50" id="wjl-7o-F7A"/>
+                <constraint firstItem="srO-yv-muC" firstAttribute="trailing" secondItem="U0h-PA-ynS" secondAttribute="trailing" id="0L7-X9-wGg"/>
+                <constraint firstItem="FOR-Ri-X1C" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NFW-WY-DRC"/>
+                <constraint firstItem="srO-yv-muC" firstAttribute="top" secondItem="L9a-xT-JZW" secondAttribute="bottom" constant="16" id="NoB-bn-AbJ"/>
+                <constraint firstItem="wJY-4u-dXZ" firstAttribute="trailing" secondItem="U0h-PA-ynS" secondAttribute="trailing" id="P7h-DL-DdE"/>
+                <constraint firstAttribute="trailing" secondItem="U0h-PA-ynS" secondAttribute="trailing" constant="44" id="PL5-HN-fQt"/>
+                <constraint firstItem="U0h-PA-ynS" firstAttribute="top" secondItem="FOR-Ri-X1C" secondAttribute="bottom" constant="17" id="TBJ-P8-D5p"/>
+                <constraint firstItem="wJY-4u-dXZ" firstAttribute="top" secondItem="srO-yv-muC" secondAttribute="bottom" constant="16" id="TYa-S3-qgt"/>
+                <constraint firstItem="wJY-4u-dXZ" firstAttribute="leading" secondItem="U0h-PA-ynS" secondAttribute="leading" id="aCg-PX-snt"/>
+                <constraint firstItem="srO-yv-muC" firstAttribute="leading" secondItem="U0h-PA-ynS" secondAttribute="leading" id="b0r-n1-yfD"/>
+                <constraint firstItem="L9a-xT-JZW" firstAttribute="top" secondItem="U0h-PA-ynS" secondAttribute="bottom" constant="16" id="eSE-mv-LwT"/>
+                <constraint firstItem="L9a-xT-JZW" firstAttribute="trailing" secondItem="U0h-PA-ynS" secondAttribute="trailing" id="hlc-Rd-9XU"/>
+                <constraint firstItem="FOR-Ri-X1C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="lRg-r8-gfi"/>
+                <constraint firstItem="L9a-xT-JZW" firstAttribute="leading" secondItem="U0h-PA-ynS" secondAttribute="leading" id="nUH-zO-Fa9"/>
+                <constraint firstItem="U0h-PA-ynS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="39" id="tzS-DI-Ik9"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <point key="canvasLocation" x="24.5" y="51.5"/>
+            <point key="canvasLocation" x="24" y="51"/>
         </view>
     </objects>
+    <resources>
+        <image name="calendar" width="48" height="48"/>
+        <image name="joinUs" width="48" height="48"/>
+        <image name="logUAS" width="48" height="48"/>
+        <image name="logoAAUC" width="201" height="91"/>
+        <image name="urticariaInfo" width="48" height="48"/>
+    </resources>
 </document>
