@@ -11,6 +11,7 @@
 #import "HistoryViewController.h"
 #import "UrticariaWebViewController.h"
 #import "JoinUsViewController.h"
+#import "SettingsViewController.h"
 #import "UrticariaAppConfiguration.h"
 
 @interface HomeViewController ()
@@ -24,6 +25,9 @@
     // Do any additional setup after loading the view from its nib.
     
     [self setTitle:@"UrticariaApp"];
+    
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logUAS"] style:UIBarButtonItemStyleDone target:self action:@selector(openSettings:)];
+    self.navigationItem.rightBarButtonItem = settingsButton;
     
     UITapGestureRecognizer *tapOnLogoView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickOnAView:)];
     UITapGestureRecognizer *tapOnRegisterView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickOnAView:)];
@@ -61,7 +65,10 @@
     } else {
         [self.navigationController pushViewController:[[JoinUsViewController alloc] init] animated:YES];
     }
-    
+}
+
+- (IBAction)openSettings:(id)sender {
+    [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
 }
 
 

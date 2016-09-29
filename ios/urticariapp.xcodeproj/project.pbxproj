@@ -27,6 +27,10 @@
 		CDAB9BD01D9BB8A400893C69 /* UrticariaAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB9BCF1D9BB8A400893C69 /* UrticariaAppConfiguration.m */; };
 		CDAB9BD41D9BC31300893C69 /* JoinUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAB9BD21D9BC31300893C69 /* JoinUsViewController.m */; };
 		CDAB9BD51D9BC31300893C69 /* JoinUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAB9BD31D9BC31300893C69 /* JoinUsViewController.xib */; };
+		CDFC3D6F1D9C1FA400DE432D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFC3D6D1D9C1FA400DE432D /* SettingsViewController.m */; };
+		CDFC3D701D9C1FA400DE432D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFC3D6E1D9C1FA400DE432D /* SettingsViewController.xib */; };
+		CDFC3D741D9C245E00DE432D /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFC3D721D9C245E00DE432D /* ModalViewController.m */; };
+		CDFC3D751D9C245E00DE432D /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFC3D731D9C245E00DE432D /* ModalViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,12 @@
 		CDAB9BD11D9BC31300893C69 /* JoinUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JoinUsViewController.h; path = Views/JoinUsViewController.h; sourceTree = "<group>"; };
 		CDAB9BD21D9BC31300893C69 /* JoinUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JoinUsViewController.m; path = Views/JoinUsViewController.m; sourceTree = "<group>"; };
 		CDAB9BD31D9BC31300893C69 /* JoinUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JoinUsViewController.xib; path = Views/JoinUsViewController.xib; sourceTree = "<group>"; };
+		CDFC3D6C1D9C1FA400DE432D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Views/SettingsViewController.h; sourceTree = "<group>"; };
+		CDFC3D6D1D9C1FA400DE432D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Views/SettingsViewController.m; sourceTree = "<group>"; };
+		CDFC3D6E1D9C1FA400DE432D /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Views/SettingsViewController.xib; sourceTree = "<group>"; };
+		CDFC3D711D9C245E00DE432D /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModalViewController.h; path = Views/ModalViewController.h; sourceTree = "<group>"; };
+		CDFC3D721D9C245E00DE432D /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModalViewController.m; path = Views/ModalViewController.m; sourceTree = "<group>"; };
+		CDFC3D731D9C245E00DE432D /* ModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ModalViewController.xib; path = Views/ModalViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +201,12 @@
 				CD97E32A1D9513A600F8D06C /* UrticariaWebViewController.h */,
 				CD97E32B1D9513A600F8D06C /* UrticariaWebViewController.m */,
 				CD97E32C1D9513A600F8D06C /* UrticariaWebViewController.xib */,
+				CDFC3D6C1D9C1FA400DE432D /* SettingsViewController.h */,
+				CDFC3D6D1D9C1FA400DE432D /* SettingsViewController.m */,
+				CDFC3D6E1D9C1FA400DE432D /* SettingsViewController.xib */,
+				CDFC3D711D9C245E00DE432D /* ModalViewController.h */,
+				CDFC3D721D9C245E00DE432D /* ModalViewController.m */,
+				CDFC3D731D9C245E00DE432D /* ModalViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -317,10 +333,12 @@
 				CD97E31A1D943B2000F8D06C /* Localizable.strings in Resources */,
 				CD97E2EE1D94356900F8D06C /* Assets.xcassets in Resources */,
 				CD97E3471D99799600F8D06C /* Main.storyboard in Resources */,
+				CDFC3D751D9C245E00DE432D /* ModalViewController.xib in Resources */,
 				CD97E3241D943CBF00F8D06C /* RegisterActivityViewController.xib in Resources */,
 				CD97E32E1D9513A600F8D06C /* UrticariaWebViewController.xib in Resources */,
 				CD97E3291D95112800F8D06C /* HistoryViewController.xib in Resources */,
 				CD97E3331D95150C00F8D06C /* HomeViewController.xib in Resources */,
+				CDFC3D701D9C1FA400DE432D /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +368,10 @@
 				CD97E2E31D94356600F8D06C /* AppDelegate.m in Sources */,
 				CD97E3231D943CBF00F8D06C /* RegisterActivityViewController.m in Sources */,
 				CDAB9BD01D9BB8A400893C69 /* UrticariaAppConfiguration.m in Sources */,
+				CDFC3D741D9C245E00DE432D /* ModalViewController.m in Sources */,
 				CD97E2E01D94356500F8D06C /* main.m in Sources */,
 				CD97E32D1D9513A600F8D06C /* UrticariaWebViewController.m in Sources */,
+				CDFC3D6F1D9C1FA400DE432D /* SettingsViewController.m in Sources */,
 				CD97E3281D95112800F8D06C /* HistoryViewController.m in Sources */,
 				CD97E3321D95150C00F8D06C /* HomeViewController.m in Sources */,
 			);
