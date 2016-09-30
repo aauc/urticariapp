@@ -7,6 +7,7 @@
 //
 
 #import "ModalViewController.h"
+#import "UrticariaAppConfiguration.h"
 
 @interface ModalViewController ()
 
@@ -15,7 +16,8 @@
 @implementation ModalViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad];    
+    
     // Do any additional setup after loading the view from its nib.
     [self.textLabel setText:self.text];
     [self.textLabel sizeToFit];

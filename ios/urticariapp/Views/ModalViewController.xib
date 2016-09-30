@@ -17,23 +17,34 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UW-50-zzh" userLabel="closeButton">
-                    <frame key="frameInset" minX="314" minY="28" width="44" height="30"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IRR-t7-JKn" userLabel="headerView">
+                    <frame key="frameInset" width="375" height="64"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Cerrar"/>
-                    <connections>
-                        <action selector="clickOnCloseButton:" destination="-1" eventType="touchUpInside" id="Zqx-h1-gt1"/>
-                    </connections>
-                </button>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UW-50-zzh" userLabel="closeButton">
+                            <frame key="frameInset" minX="313" minY="24" width="44" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Cerrar">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="clickOnCloseButton:" destination="-1" eventType="touchUpInside" id="Zqx-h1-gt1"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmM-Pe-Ex0" userLabel="titleLabel">
+                            <frame key="frameInset" minX="63" minY="29" width="249" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCV-a1-koR" userLabel="textLabel">
                     <mutableString key="text">Lorem fistrum papaar papaar caballo blanco caballo negroorl ese pedazo de ese hombree torpedo al ataquerl. No te digo trigo por no llamarte Rodrigor a gramenawer apetecan hasta luego Lucas. Te va a hasé pupitaa de la pradera qué dise usteer ese hombree ese que llega pupita. Ese hombree pupita fistro qué dise usteer. A wan a gramenawer fistro jarl benemeritaar ahorarr condemor. Papaar papaar no te digo trigo por no llamarte Rodrigor a peich ese que llega condemor mamaar ese que llega diodenoo por la gloria de mi madre.</mutableString>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmM-Pe-Ex0" userLabel="titleLabel">
-                    <frame key="frameInset" minX="63" minY="32" width="249" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -41,10 +52,11 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="cCV-a1-koR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="MnU-vE-PjR"/>
+                <constraint firstItem="cCV-a1-koR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="MnU-vE-PjR"/>
                 <constraint firstAttribute="trailing" secondItem="cCV-a1-koR" secondAttribute="trailing" constant="16" id="N9n-9i-Uhp"/>
                 <constraint firstItem="cCV-a1-koR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="PzY-U4-VAc"/>
             </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>

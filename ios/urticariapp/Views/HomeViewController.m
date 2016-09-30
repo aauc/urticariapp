@@ -26,7 +26,7 @@
     
     [self setTitle:@"UrticariaApp"];
     
-    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logUAS"] style:UIBarButtonItemStyleDone target:self action:@selector(openSettings:)];
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStyleDone target:self action:@selector(openSettings:)];
     self.navigationItem.rightBarButtonItem = settingsButton;
     
     UITapGestureRecognizer *tapOnLogoView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickOnAView:)];
