@@ -17,7 +17,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoAAUC" translatesAutoresizingMaskIntoConstraints="NO" id="FOR-Ri-X1C" userLabel="logoAAUCImageView">
@@ -35,9 +35,9 @@
                     <color key="backgroundColor" red="0.0" green="0.40392156862745099" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="UEd-ek-uUb" firstAttribute="centerX" secondItem="U0h-PA-ynS" secondAttribute="centerX" id="Eaw-UT-r6z"/>
-                        <constraint firstAttribute="bottom" secondItem="yeb-Cm-eGE" secondAttribute="bottom" constant="5" id="LRE-96-nfa"/>
-                        <constraint firstItem="yeb-Cm-eGE" firstAttribute="top" secondItem="UEd-ek-uUb" secondAttribute="bottom" constant="5" id="gXS-La-R0j"/>
-                        <constraint firstItem="UEd-ek-uUb" firstAttribute="top" secondItem="U0h-PA-ynS" secondAttribute="top" constant="5" id="ljr-VI-0aO"/>
+                        <constraint firstAttribute="height" constant="75" id="fTQ-Vi-o85"/>
+                        <constraint firstItem="yeb-Cm-eGE" firstAttribute="top" secondItem="UEd-ek-uUb" secondAttribute="bottom" constant="2" id="gXS-La-R0j"/>
+                        <constraint firstItem="UEd-ek-uUb" firstAttribute="top" secondItem="U0h-PA-ynS" secondAttribute="top" constant="3" id="ljr-VI-0aO"/>
                         <constraint firstItem="yeb-Cm-eGE" firstAttribute="centerX" secondItem="U0h-PA-ynS" secondAttribute="centerX" id="yyW-nI-kKu"/>
                     </constraints>
                 </view>
@@ -52,29 +52,10 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="Fy4-01-0iV" firstAttribute="top" secondItem="L9a-xT-JZW" secondAttribute="top" constant="5" id="07x-fc-1tk"/>
-                        <constraint firstItem="Syo-8L-qKi" firstAttribute="top" secondItem="Fy4-01-0iV" secondAttribute="bottom" constant="5" id="8nP-0I-M7R"/>
-                        <constraint firstAttribute="bottom" secondItem="Syo-8L-qKi" secondAttribute="bottom" constant="5" id="D79-iv-Pb4"/>
+                        <constraint firstItem="Fy4-01-0iV" firstAttribute="top" secondItem="L9a-xT-JZW" secondAttribute="top" constant="3" id="07x-fc-1tk"/>
+                        <constraint firstItem="Syo-8L-qKi" firstAttribute="top" secondItem="Fy4-01-0iV" secondAttribute="bottom" constant="3" id="8nP-0I-M7R"/>
                         <constraint firstItem="Syo-8L-qKi" firstAttribute="centerX" secondItem="L9a-xT-JZW" secondAttribute="centerX" id="SwN-l6-VVE"/>
                         <constraint firstItem="Fy4-01-0iV" firstAttribute="centerX" secondItem="L9a-xT-JZW" secondAttribute="centerX" id="bTg-cu-LV1"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srO-yv-muC" userLabel="urticariaInfoView">
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="urticariaInfo" translatesAutoresizingMaskIntoConstraints="NO" id="bm2-3t-xFJ" userLabel="urticariaInfoImageView"/>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Urticaria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHP-76-S7S" userLabel="urticariaInfoLabel">
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="bHP-76-S7S" secondAttribute="bottom" constant="5" id="dwp-wm-Lbt"/>
-                        <constraint firstItem="bm2-3t-xFJ" firstAttribute="centerX" secondItem="srO-yv-muC" secondAttribute="centerX" id="ffe-wm-NdQ"/>
-                        <constraint firstItem="bHP-76-S7S" firstAttribute="centerX" secondItem="srO-yv-muC" secondAttribute="centerX" id="rOl-Dv-YBm"/>
-                        <constraint firstItem="bHP-76-S7S" firstAttribute="top" secondItem="bm2-3t-xFJ" secondAttribute="bottom" constant="5" id="u7V-r5-a2G"/>
-                        <constraint firstItem="bm2-3t-xFJ" firstAttribute="top" secondItem="srO-yv-muC" secondAttribute="top" constant="5" id="zPM-po-Qkc"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJY-4u-dXZ" userLabel="joinUsView">
@@ -88,17 +69,34 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="rUZ-Q7-DRr" firstAttribute="top" secondItem="anr-4r-6xV" secondAttribute="bottom" constant="5" id="ONf-fF-6hx"/>
-                        <constraint firstItem="anr-4r-6xV" firstAttribute="top" secondItem="wJY-4u-dXZ" secondAttribute="top" constant="5" id="bah-oA-5kG"/>
-                        <constraint firstAttribute="bottom" secondItem="rUZ-Q7-DRr" secondAttribute="bottom" constant="5" id="cAG-oQ-dM6"/>
+                        <constraint firstItem="rUZ-Q7-DRr" firstAttribute="top" secondItem="anr-4r-6xV" secondAttribute="bottom" constant="3" id="ONf-fF-6hx"/>
+                        <constraint firstItem="anr-4r-6xV" firstAttribute="top" secondItem="wJY-4u-dXZ" secondAttribute="top" constant="3" id="bah-oA-5kG"/>
                         <constraint firstItem="anr-4r-6xV" firstAttribute="centerX" secondItem="wJY-4u-dXZ" secondAttribute="centerX" id="gmr-jM-bNr"/>
                         <constraint firstItem="rUZ-Q7-DRr" firstAttribute="centerX" secondItem="wJY-4u-dXZ" secondAttribute="centerX" id="oCP-Ry-iTK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srO-yv-muC" userLabel="urticariaInfoView">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="urticariaInfo" translatesAutoresizingMaskIntoConstraints="NO" id="bm2-3t-xFJ" userLabel="urticariaInfoImageView"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Urticaria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHP-76-S7S" userLabel="urticariaInfoLabel">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="bm2-3t-xFJ" firstAttribute="centerX" secondItem="srO-yv-muC" secondAttribute="centerX" id="ffe-wm-NdQ"/>
+                        <constraint firstItem="bHP-76-S7S" firstAttribute="centerX" secondItem="srO-yv-muC" secondAttribute="centerX" id="rOl-Dv-YBm"/>
+                        <constraint firstItem="bHP-76-S7S" firstAttribute="top" secondItem="bm2-3t-xFJ" secondAttribute="bottom" constant="3" id="u7V-r5-a2G"/>
+                        <constraint firstItem="bm2-3t-xFJ" firstAttribute="top" secondItem="srO-yv-muC" secondAttribute="top" constant="3" id="zPM-po-Qkc"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="srO-yv-muC" firstAttribute="trailing" secondItem="U0h-PA-ynS" secondAttribute="trailing" id="0L7-X9-wGg"/>
+                <constraint firstItem="wJY-4u-dXZ" firstAttribute="height" secondItem="srO-yv-muC" secondAttribute="height" id="BMD-6N-wHO"/>
                 <constraint firstItem="FOR-Ri-X1C" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NFW-WY-DRC"/>
                 <constraint firstItem="srO-yv-muC" firstAttribute="top" secondItem="L9a-xT-JZW" secondAttribute="bottom" constant="16" id="NoB-bn-AbJ"/>
                 <constraint firstItem="wJY-4u-dXZ" firstAttribute="trailing" secondItem="U0h-PA-ynS" secondAttribute="trailing" id="P7h-DL-DdE"/>
@@ -111,6 +109,8 @@
                 <constraint firstItem="L9a-xT-JZW" firstAttribute="trailing" secondItem="U0h-PA-ynS" secondAttribute="trailing" id="hlc-Rd-9XU"/>
                 <constraint firstItem="FOR-Ri-X1C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="lRg-r8-gfi"/>
                 <constraint firstItem="L9a-xT-JZW" firstAttribute="leading" secondItem="U0h-PA-ynS" secondAttribute="leading" id="nUH-zO-Fa9"/>
+                <constraint firstItem="L9a-xT-JZW" firstAttribute="height" secondItem="U0h-PA-ynS" secondAttribute="height" id="oj6-2V-Lb8"/>
+                <constraint firstItem="srO-yv-muC" firstAttribute="height" secondItem="L9a-xT-JZW" secondAttribute="height" id="sbc-If-XIJ"/>
                 <constraint firstItem="U0h-PA-ynS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="39" id="tzS-DI-Ik9"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
