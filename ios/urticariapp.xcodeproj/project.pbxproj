@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3921D27B1DBFD3D1004E5183 /* INTextViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3921D27A1DBFD3D1004E5183 /* INTextViewViewController.m */; };
+		39287E651DBEC82E002D2BC5 /* INSelectAngLimiTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39287E641DBEC82E002D2BC5 /* INSelectAngLimiTVController.m */; };
+		39287E671DBED030002D2BC5 /* 17-check.png in Resources */ = {isa = PBXBuildFile; fileRef = 39287E661DBED030002D2BC5 /* 17-check.png */; };
+		396C55B11DBD2FB30017A503 /* INDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 396C55B01DBD2FB30017A503 /* INDataManager.m */; };
+		396C55B41DBD31240017A503 /* urtiModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 396C55B21DBD31240017A503 /* urtiModel.xcdatamodeld */; };
+		396C55C61DBD36B50017A503 /* INRegister+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 396C55C31DBD36B50017A503 /* INRegister+CoreDataClass.m */; };
+		396C55C71DBD36B50017A503 /* INRegister+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 396C55C51DBD36B50017A503 /* INRegister+CoreDataProperties.m */; };
+		39B794E41DBC0B16002F192D /* INMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B794E31DBC0B16002F192D /* INMonthViewController.m */; };
+		39B794E81DBC0BCB002F192D /* INHeaderWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B794E71DBC0BCB002F192D /* INHeaderWeekView.m */; };
+		39B794EB1DBC0C1A002F192D /* INWeeksInfiniteVerticalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B794EA1DBC0C1A002F192D /* INWeeksInfiniteVerticalScrollView.m */; };
+		39B794EE1DBC0C4F002F192D /* INWeekInVertScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B794ED1DBC0C4F002F192D /* INWeekInVertScroll.m */; };
+		39B794F11DBC0C6F002F192D /* INDayViewInWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B794F01DBC0C6F002F192D /* INDayViewInWeek.m */; };
 		CD97E2E01D94356500F8D06C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E2DF1D94356500F8D06C /* main.m */; };
 		CD97E2E31D94356600F8D06C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E2E21D94356600F8D06C /* AppDelegate.m */; };
-		CD97E2EC1D94356900F8D06C /* urticariapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD97E2EA1D94356900F8D06C /* urticariapp.xcdatamodeld */; };
 		CD97E2EE1D94356900F8D06C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD97E2ED1D94356900F8D06C /* Assets.xcassets */; };
 		CD97E2F11D94356900F8D06C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD97E2EF1D94356900F8D06C /* LaunchScreen.storyboard */; };
 		CD97E2FC1D94356E00F8D06C /* urticariappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD97E2FB1D94356E00F8D06C /* urticariappTests.m */; };
@@ -51,11 +62,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3921D2791DBFD3D1004E5183 /* INTextViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTextViewViewController.h; sourceTree = "<group>"; };
+		3921D27A1DBFD3D1004E5183 /* INTextViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTextViewViewController.m; sourceTree = "<group>"; };
+		39287E631DBEC82E002D2BC5 /* INSelectAngLimiTVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSelectAngLimiTVController.h; sourceTree = "<group>"; };
+		39287E641DBEC82E002D2BC5 /* INSelectAngLimiTVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSelectAngLimiTVController.m; sourceTree = "<group>"; };
+		39287E661DBED030002D2BC5 /* 17-check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "17-check.png"; sourceTree = "<group>"; };
+		396C55AF1DBD2FB30017A503 /* INDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INDataManager.h; sourceTree = "<group>"; };
+		396C55B01DBD2FB30017A503 /* INDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDataManager.m; sourceTree = "<group>"; };
+		396C55B31DBD31240017A503 /* urtiModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = urtiModel.xcdatamodel; sourceTree = "<group>"; };
+		396C55C21DBD36B50017A503 /* INRegister+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "INRegister+CoreDataClass.h"; path = "../INRegister+CoreDataClass.h"; sourceTree = "<group>"; };
+		396C55C31DBD36B50017A503 /* INRegister+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "INRegister+CoreDataClass.m"; path = "../INRegister+CoreDataClass.m"; sourceTree = "<group>"; };
+		396C55C41DBD36B50017A503 /* INRegister+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "INRegister+CoreDataProperties.h"; path = "../INRegister+CoreDataProperties.h"; sourceTree = "<group>"; };
+		396C55C51DBD36B50017A503 /* INRegister+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "INRegister+CoreDataProperties.m"; path = "../INRegister+CoreDataProperties.m"; sourceTree = "<group>"; };
+		39B794E21DBC0B16002F192D /* INMonthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INMonthViewController.h; sourceTree = "<group>"; };
+		39B794E31DBC0B16002F192D /* INMonthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INMonthViewController.m; sourceTree = "<group>"; };
+		39B794E61DBC0BCB002F192D /* INHeaderWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INHeaderWeekView.h; sourceTree = "<group>"; };
+		39B794E71DBC0BCB002F192D /* INHeaderWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INHeaderWeekView.m; sourceTree = "<group>"; };
+		39B794E91DBC0C1A002F192D /* INWeeksInfiniteVerticalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INWeeksInfiniteVerticalScrollView.h; sourceTree = "<group>"; };
+		39B794EA1DBC0C1A002F192D /* INWeeksInfiniteVerticalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INWeeksInfiniteVerticalScrollView.m; sourceTree = "<group>"; };
+		39B794EC1DBC0C4F002F192D /* INWeekInVertScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INWeekInVertScroll.h; sourceTree = "<group>"; };
+		39B794ED1DBC0C4F002F192D /* INWeekInVertScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INWeekInVertScroll.m; sourceTree = "<group>"; };
+		39B794EF1DBC0C6F002F192D /* INDayViewInWeek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INDayViewInWeek.h; sourceTree = "<group>"; };
+		39B794F01DBC0C6F002F192D /* INDayViewInWeek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INDayViewInWeek.m; sourceTree = "<group>"; };
+		39B794F31DBC0CF2002F192D /* INCalendarConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = INCalendarConstants.h; sourceTree = "<group>"; };
 		CD97E2DB1D94356500F8D06C /* urticariapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = urticariapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD97E2DF1D94356500F8D06C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD97E2E11D94356600F8D06C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD97E2E21D94356600F8D06C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CD97E2EB1D94356900F8D06C /* urticariapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = urticariapp.xcdatamodel; sourceTree = "<group>"; };
 		CD97E2ED1D94356900F8D06C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD97E2F01D94356900F8D06C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD97E2F21D94356A00F8D06C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +152,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39287E621DBEC7EE002D2BC5 /* AuxSelector */ = {
+			isa = PBXGroup;
+			children = (
+				39287E661DBED030002D2BC5 /* 17-check.png */,
+				39287E631DBEC82E002D2BC5 /* INSelectAngLimiTVController.h */,
+				39287E641DBEC82E002D2BC5 /* INSelectAngLimiTVController.m */,
+				3921D2791DBFD3D1004E5183 /* INTextViewViewController.h */,
+				3921D27A1DBFD3D1004E5183 /* INTextViewViewController.m */,
+			);
+			name = AuxSelector;
+			sourceTree = "<group>";
+		};
+		396C55AE1DBD2F720017A503 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				396C55B51DBD358E0017A503 /* Model Objects */,
+				396C55AF1DBD2FB30017A503 /* INDataManager.h */,
+				396C55B01DBD2FB30017A503 /* INDataManager.m */,
+				396C55B21DBD31240017A503 /* urtiModel.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		396C55B51DBD358E0017A503 /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				396C55C21DBD36B50017A503 /* INRegister+CoreDataClass.h */,
+				396C55C31DBD36B50017A503 /* INRegister+CoreDataClass.m */,
+				396C55C41DBD36B50017A503 /* INRegister+CoreDataProperties.h */,
+				396C55C51DBD36B50017A503 /* INRegister+CoreDataProperties.m */,
+			);
+			name = "Model Objects";
+			sourceTree = "<group>";
+		};
+		39B794E11DBC0AA1002F192D /* History Month Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				39B794F31DBC0CF2002F192D /* INCalendarConstants.h */,
+				39B794E51DBC0B3E002F192D /* Month ViewCont Subvies */,
+				39B794E21DBC0B16002F192D /* INMonthViewController.h */,
+				39B794E31DBC0B16002F192D /* INMonthViewController.m */,
+			);
+			name = "History Month Calendar";
+			sourceTree = "<group>";
+		};
+		39B794E51DBC0B3E002F192D /* Month ViewCont Subvies */ = {
+			isa = PBXGroup;
+			children = (
+				39B794E61DBC0BCB002F192D /* INHeaderWeekView.h */,
+				39B794E71DBC0BCB002F192D /* INHeaderWeekView.m */,
+				39B794E91DBC0C1A002F192D /* INWeeksInfiniteVerticalScrollView.h */,
+				39B794EA1DBC0C1A002F192D /* INWeeksInfiniteVerticalScrollView.m */,
+				39B794EC1DBC0C4F002F192D /* INWeekInVertScroll.h */,
+				39B794ED1DBC0C4F002F192D /* INWeekInVertScroll.m */,
+				39B794EF1DBC0C6F002F192D /* INDayViewInWeek.h */,
+				39B794F01DBC0C6F002F192D /* INDayViewInWeek.m */,
+			);
+			name = "Month ViewCont Subvies";
+			sourceTree = "<group>";
+		};
 		CD97E2D21D94356500F8D06C = {
 			isa = PBXGroup;
 			children = (
@@ -142,14 +235,14 @@
 		CD97E2DD1D94356500F8D06C /* urticariapp */ = {
 			isa = PBXGroup;
 			children = (
+				396C55AE1DBD2F720017A503 /* Model */,
 				CD97E2E11D94356600F8D06C /* AppDelegate.h */,
 				CD97E2E21D94356600F8D06C /* AppDelegate.m */,
 				CD97E2ED1D94356900F8D06C /* Assets.xcassets */,
 				CD97E2EF1D94356900F8D06C /* LaunchScreen.storyboard */,
 				CD97E2F21D94356A00F8D06C /* Info.plist */,
 				CDAB9BCD1D9BB85200893C69 /* Services */,
-				CD97E3141D9435C500F8D06C /* Views */,
-				CD97E2EA1D94356900F8D06C /* urticariapp.xcdatamodeld */,
+				CD97E3141D9435C500F8D06C /* ViewControllers */,
 				CD97E2DE1D94356500F8D06C /* Supporting Files */,
 				CD97E3461D99799600F8D06C /* Main.storyboard */,
 			);
@@ -183,12 +276,13 @@
 			path = urticariappUITests;
 			sourceTree = "<group>";
 		};
-		CD97E3141D9435C500F8D06C /* Views */ = {
+		CD97E3141D9435C500F8D06C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				CD97E3251D95112700F8D06C /* HistoryViewController.h */,
 				CD97E3261D95112700F8D06C /* HistoryViewController.m */,
 				CD97E3271D95112700F8D06C /* HistoryViewController.xib */,
+				39B794E11DBC0AA1002F192D /* History Month Calendar */,
 				CD97E32F1D95150C00F8D06C /* HomeViewController.h */,
 				CD97E3301D95150C00F8D06C /* HomeViewController.m */,
 				CD97E3311D95150C00F8D06C /* HomeViewController.xib */,
@@ -198,6 +292,7 @@
 				CD97E3201D943CBF00F8D06C /* RegisterActivityViewController.h */,
 				CD97E3211D943CBF00F8D06C /* RegisterActivityViewController.m */,
 				CD97E3221D943CBF00F8D06C /* RegisterActivityViewController.xib */,
+				39287E621DBEC7EE002D2BC5 /* AuxSelector */,
 				CD97E32A1D9513A600F8D06C /* UrticariaWebViewController.h */,
 				CD97E32B1D9513A600F8D06C /* UrticariaWebViewController.m */,
 				CD97E32C1D9513A600F8D06C /* UrticariaWebViewController.xib */,
@@ -208,7 +303,7 @@
 				CDFC3D721D9C245E00DE432D /* ModalViewController.m */,
 				CDFC3D731D9C245E00DE432D /* ModalViewController.xib */,
 			);
-			name = Views;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		CDAB9BCD1D9BB85200893C69 /* Services */ = {
@@ -288,6 +383,7 @@
 					CD97E2DA1D94356500F8D06C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = HQYS7E3XE5;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					CD97E2F61D94356E00F8D06C = {
@@ -338,6 +434,7 @@
 				CD97E32E1D9513A600F8D06C /* UrticariaWebViewController.xib in Resources */,
 				CD97E3291D95112800F8D06C /* HistoryViewController.xib in Resources */,
 				CD97E3331D95150C00F8D06C /* HomeViewController.xib in Resources */,
+				39287E671DBED030002D2BC5 /* 17-check.png in Resources */,
 				CDFC3D701D9C1FA400DE432D /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,17 +460,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD97E2EC1D94356900F8D06C /* urticariapp.xcdatamodeld in Sources */,
 				CDAB9BD41D9BC31300893C69 /* JoinUsViewController.m in Sources */,
+				39B794E81DBC0BCB002F192D /* INHeaderWeekView.m in Sources */,
+				396C55B41DBD31240017A503 /* urtiModel.xcdatamodeld in Sources */,
 				CD97E2E31D94356600F8D06C /* AppDelegate.m in Sources */,
+				39B794EE1DBC0C4F002F192D /* INWeekInVertScroll.m in Sources */,
 				CD97E3231D943CBF00F8D06C /* RegisterActivityViewController.m in Sources */,
 				CDAB9BD01D9BB8A400893C69 /* UrticariaAppConfiguration.m in Sources */,
 				CDFC3D741D9C245E00DE432D /* ModalViewController.m in Sources */,
+				39B794E41DBC0B16002F192D /* INMonthViewController.m in Sources */,
+				396C55C71DBD36B50017A503 /* INRegister+CoreDataProperties.m in Sources */,
+				3921D27B1DBFD3D1004E5183 /* INTextViewViewController.m in Sources */,
+				39287E651DBEC82E002D2BC5 /* INSelectAngLimiTVController.m in Sources */,
 				CD97E2E01D94356500F8D06C /* main.m in Sources */,
 				CD97E32D1D9513A600F8D06C /* UrticariaWebViewController.m in Sources */,
+				396C55C61DBD36B50017A503 /* INRegister+CoreDataClass.m in Sources */,
 				CDFC3D6F1D9C1FA400DE432D /* SettingsViewController.m in Sources */,
 				CD97E3281D95112800F8D06C /* HistoryViewController.m in Sources */,
+				39B794EB1DBC0C1A002F192D /* INWeeksInfiniteVerticalScrollView.m in Sources */,
 				CD97E3321D95150C00F8D06C /* HomeViewController.m in Sources */,
+				396C55B11DBD2FB30017A503 /* INDataManager.m in Sources */,
+				39B794F11DBC0C6F002F192D /* INDayViewInWeek.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,12 +634,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = HQYS7E3XE5;
 				INFOPLIST_FILE = urticariapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.aauc.urticariapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "urticariapp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -540,12 +651,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = HQYS7E3XE5;
 				INFOPLIST_FILE = urticariapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.aauc.urticariapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "urticariapp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -637,13 +751,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CD97E2EA1D94356900F8D06C /* urticariapp.xcdatamodeld */ = {
+		396C55B21DBD31240017A503 /* urtiModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CD97E2EB1D94356900F8D06C /* urticariapp.xcdatamodel */,
+				396C55B31DBD31240017A503 /* urtiModel.xcdatamodel */,
 			);
-			currentVersion = CD97E2EB1D94356900F8D06C /* urticariapp.xcdatamodel */;
-			path = urticariapp.xcdatamodeld;
+			currentVersion = 396C55B31DBD31240017A503 /* urtiModel.xcdatamodel */;
+			path = urtiModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

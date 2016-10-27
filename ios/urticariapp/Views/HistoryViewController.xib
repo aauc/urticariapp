@@ -7,12 +7,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController">
             <connections>
+                <outlet property="angioImageView" destination="hOX-8R-7MZ" id="biL-fg-wID"/>
+                <outlet property="containerCalendarView" destination="Qkt-0u-c0F" id="QnH-VW-2En"/>
+                <outlet property="infoLabel" destination="kXy-wY-MyQ" id="qRM-6F-n0H"/>
+                <outlet property="itchImageView" destination="chi-DY-yza" id="UqV-WR-Sba"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="whelasImageView" destination="chy-Dq-EpJ" id="DlA-tI-Pcu"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbf-ll-dkz" userLabel="scrollView">

@@ -7,12 +7,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterActivityViewController">
             <connections>
+                <outlet property="angioView" destination="lbm-ic-Vxj" id="cQk-QU-MfW"/>
+                <outlet property="dateButton" destination="C1L-3d-GBi" id="WgO-lJ-lag"/>
+                <outlet property="dayButton" destination="C1L-3d-GBi" id="C4Z-ss-OlZ"/>
+                <outlet property="itch0" destination="fPC-f1-D95" id="U6i-Th-bWh"/>
+                <outlet property="itch1" destination="I4w-Zl-XAr" id="5AR-FX-XuU"/>
+                <outlet property="itch2" destination="ke8-0a-fzg" id="qsw-9N-abJ"/>
+                <outlet property="itch3" destination="x8o-ME-alg" id="Y52-ec-1uf"/>
+                <outlet property="limitationsView" destination="lvv-zz-LwS" id="B9u-vY-CKI"/>
+                <outlet property="noteView" destination="y0L-rc-TSD" id="EgC-iU-aE0"/>
+                <outlet property="photoView" destination="o53-Tf-fgc" id="KvG-J5-qd0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wheals0" destination="22z-f0-wUo" id="pFx-6h-Pua"/>
+                <outlet property="wheals1" destination="nL8-rT-1MM" id="OeX-DN-kU7"/>
+                <outlet property="wheals2" destination="hKx-iM-3rM" id="305-GO-Mbc"/>
+                <outlet property="wheals3" destination="8kS-NY-x1F" id="2jn-Ja-m7A"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89Z-fi-Rps" userLabel="scrollView">
@@ -21,12 +35,21 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-PD-M8c" userLabel="dayLessButton">
                                     <state key="normal" image="dayLess"/>
+                                    <connections>
+                                        <action selector="dayLess:" destination="-1" eventType="touchUpInside" id="HYI-0h-fr8"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-3d-GBi" userLabel="dateButton">
                                     <state key="normal" title="30/12/2016"/>
+                                    <connections>
+                                        <action selector="selectDate:" destination="-1" eventType="touchUpInside" id="cVR-xa-HKk"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAq-V1-OBc" userLabel="dayMoreButton">
                                     <state key="normal" image="dayMore"/>
+                                    <connections>
+                                        <action selector="dayMore:" destination="-1" eventType="touchUpInside" id="HnC-TB-h9u"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elija la fecha que desar registrar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-f2-ugW" userLabel="chooseADateLabel">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
