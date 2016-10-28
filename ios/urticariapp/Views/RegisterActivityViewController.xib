@@ -10,6 +10,7 @@
                 <outlet property="angioView" destination="lbm-ic-Vxj" id="cQk-QU-MfW"/>
                 <outlet property="dateTextField" destination="eLx-cG-JTi" id="rxV-tk-hio"/>
                 <outlet property="dateTextView" destination="seQ-kQ-IqO" id="fu6-0n-e1q"/>
+                <outlet property="dayMoreButton" destination="aAq-V1-OBc" id="2LA-d9-SNI"/>
                 <outlet property="itch0" destination="fPC-f1-D95" id="U6i-Th-bWh"/>
                 <outlet property="itch1" destination="I4w-Zl-XAr" id="5AR-FX-XuU"/>
                 <outlet property="itch2" destination="ke8-0a-fzg" id="qsw-9N-abJ"/>

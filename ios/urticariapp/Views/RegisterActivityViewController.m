@@ -15,7 +15,7 @@
 
 #import "INDataManager.h"
 
-#define COLOR_SELECT_CYAN  [UIColor cyanColor]
+#define COLOR_SELECT_CYAN  [UIColor colorWithRed:0.0/255.0 green:103.0/255.0 blue:159.0/255.0 alpha:0.3]
 
 @interface RegisterActivityViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     UIDatePicker *datePicker;
@@ -38,6 +38,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *dateTextField;
 @property (strong, nonatomic) IBOutlet UITextView *dateTextView;
+@property (strong, nonatomic) IBOutlet UIButton *dayMoreButton;
 
 //View to add Actions.
 
@@ -86,24 +87,22 @@
     self.itchValue = 0;
     
     UITapGestureRecognizer *tapNote = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addNoteAction)];
-    
     [self.noteView addGestureRecognizer:tapNote];
     
     UITapGestureRecognizer *tapPhoto = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(takePhotoAction)];
-    
     [self.photoView addGestureRecognizer:tapPhoto];
 
     
     UITapGestureRecognizer *tapAngio = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectAngio)];
-
     [self.angioView addGestureRecognizer:tapAngio];
     
     UITapGestureRecognizer *tapLimit = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectLimitations)];
-    
     [self.limitationsView addGestureRecognizer:tapLimit];
     
     
     // Start Today.
+    [self.dayMoreButton setEnabled:NO];
+    
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"dd/MM/yyyy"];
     
@@ -142,58 +141,51 @@
 }
 
 
--(void)updateRegisterToSelectDate
-{
+- (void)updateRegisterToSelectDate {
     [self checkToSave];
     
     NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:[NSEntityDescription entityForName:@"INRegister" inManagedObjectContext:[INDataManager sharedManager].managedObjectContext]];
     [fetch setPredicate:[NSPredicate predicateWithFormat:@"dateCompYear = %ld AND dateCompMonth = %ld AND dateCompDay = %ld",self.dateCompYear, self.dateCompMonth, self.dateCompDay]];
     NSArray *result = [[INDataManager sharedManager].managedObjectContext executeFetchRequest:fetch error:nil];
-    if ([result count])
-    {
+    if ([result count]) {
         self.reg = [result firstObject];
         // Update Values.
         self.whealsValue = self.reg.wheals.integerValue;
         self.itchValue = self.reg.itch.integerValue;
-        
-    }
-    else
-    {
+        self.hasChangedAndNeedSave = YES;
+    } else {
         //We created a new one
         self.reg = [NSEntityDescription insertNewObjectForEntityForName:@"INRegister" inManagedObjectContext:[INDataManager sharedManager].managedObjectContext];
         self.reg.dateCompYear = @(self.dateCompYear);
         self.reg.dateCompMonth = @(self.dateCompMonth);
         self.reg.dateCompDay = @(self.dateCompDay);
         self.reg.dateTimeInterval = @([self dateFromComponetsLikeDay:self.dateCompDay month:self.dateCompMonth andYear:self.dateCompYear].timeIntervalSince1970);
-        
+        self.whealsValue = 0;
+        self.itchValue = 0;
     }
     
     for (NSInteger i=0; i<4; i++) {
         UIView *whealsView = [self valueForKey:[NSString stringWithFormat:@"wheals%ld",(long)i]];
-        if (i == self.whealsValue) {
-            whealsView.backgroundColor = COLOR_SELECT_CYAN;
+        if ([result count]) {
+            whealsView.backgroundColor = (i == self.whealsValue) ? COLOR_SELECT_CYAN : [UIColor clearColor];
         } else {
-            whealsView.backgroundColor = [UIColor clearColor];
+            whealsView.backgroundColor = (i == 0) ? COLOR_SELECT_CYAN : [UIColor clearColor];
         }
         UIView *itchView = [self valueForKey:[NSString stringWithFormat:@"itch%ld",(long)i]];
-        if (i == self.itchValue) {
-            itchView.backgroundColor = COLOR_SELECT_CYAN;
+        if ([result count]) {
+            itchView.backgroundColor = (i == self.itchValue) ? COLOR_SELECT_CYAN : [UIColor clearColor];
         } else {
-            itchView.backgroundColor = [UIColor clearColor];
+            itchView.backgroundColor = (i == 0) ? COLOR_SELECT_CYAN : [UIColor clearColor];
         }
-        
     }
-
-    
 }
 
--(void)viewDidDisappear:(BOOL)animated {
+- (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-
 }
 
--(void)checkToSave {
+- (void)checkToSave {
     if (self.hasChangedAndNeedSave || self.reg.limitations.integerValue || self.reg.angioedema.integerValue) {
         [[INDataManager sharedManager].managedObjectContext save:nil];
         self.hasChangedAndNeedSave = NO;
@@ -206,11 +198,27 @@
 #pragma mark - Selectors
 
 - (void)selectADate {
-    [self.dateTextView setText:[NSString stringWithFormat:@"%@", [formatter stringFromDate:datePicker.date]]];
+    NSDate *dateMore = [datePicker.date dateByAddingTimeInterval:1*24*60*60];
+    
+    [self.dayMoreButton setEnabled:!(dateMore.timeIntervalSince1970 >= self.today.timeIntervalSince1970)];
+    
+    NSInteger day,month,year;
+    
+    [self componentsDay:&day month:&month andYear:&year fromDate:datePicker.date];
+    
+    self.dateCompDay = day;
+    self.dateCompMonth = month;
+    self.dateCompYear = year;
+    
+    [self updateRegisterToSelectDate];
+    
+    NSString *text = [NSString stringWithFormat:@"%02ld/%02ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
+    [self.dateTextView setText:text];
+    
     [self.dateTextField resignFirstResponder];
 }
 
--(void)selectWheals:(UIGestureRecognizer *)gestt {
+- (void)selectWheals:(UIGestureRecognizer *)gestt {
     if (self.whealsValue == gestt.view.tag) {
         return;
     }
@@ -226,8 +234,7 @@
     self.hasChangedAndNeedSave = YES;
 }
 
--(void)selectItch:(UIGestureRecognizer *)gestt
-{
+- (void)selectItch:(UIGestureRecognizer *)gestt {
     if (self.itchValue == gestt.view.tag) {
         return;
     }
@@ -246,8 +253,7 @@
 
 #pragma mark - Buttons Actions
 
--(void)addNoteAction
-{
+- (void)addNoteAction {
     INTextViewViewController *vController = [[INTextViewViewController alloc] init];
     vController.reg = self.reg;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vController];
@@ -259,8 +265,7 @@
 }
 
 
--(void)takePhotoAction
-{
+- (void)takePhotoAction {
     UIAlertController *actionSheetController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"Choose source", @"") preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *library = [UIAlertAction actionWithTitle:NSLocalizedString(@"Library", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -296,7 +301,7 @@
     [self presentViewController:actionSheetController animated:YES completion:nil];
 }
 
--(void)selectAngio {
+- (void)selectAngio {
     INSelectAngLimiTVController *vController = [[INSelectAngLimiTVController alloc] init];
     vController.isAngio = YES;
     vController.reg = self.reg;
@@ -308,7 +313,7 @@
     [self presentViewController:navController animated:YES completion:nil];
 }
 
--(void)selectLimitations {
+- (void)selectLimitations {
     INSelectAngLimiTVController *vController = [[INSelectAngLimiTVController alloc] init];
     vController.reg = self.reg;
     vController.isAngio = NO;
@@ -331,23 +336,22 @@
 }
 
 
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *originalImage = [info valueForKey:UIImagePickerControllerOriginalImage];
     
     self.reg.picture = UIImageJPEGRepresentation(originalImage, 0.7);
     self.hasChangedAndNeedSave = YES;
-
-   [picker dismissViewControllerAnimated:YES completion:nil];
     
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Date Buttons.
 
 - (IBAction)dayLess:(id)sender {
     NSDate *date = [self dateFromComponetsLikeDay:self.dateCompDay month:self.dateCompMonth andYear:self.dateCompYear];
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDate *dateLess = [cal dateByAddingUnit:NSCalendarUnitDay value:-1 toDate:date options:NSCalendarWrapComponents];
+    NSDate *dateLess = [date dateByAddingTimeInterval:-1*24*60*60];
+    
+    [self.dayMoreButton setEnabled:YES];
     
     NSInteger day,month,year;
     
@@ -359,21 +363,18 @@
 
     [self updateRegisterToSelectDate];
     
-    NSString *text = [NSString stringWithFormat:@"%2ld/%2ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
+    NSString *text = [NSString stringWithFormat:@"%02ld/%02ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
     [self.dateTextView setText:text];
-}
-
-- (IBAction)selectDate:(id)sender {
-    
+    [self.dateTextField resignFirstResponder];
 }
 
 - (IBAction)dayMore:(id)sender {
     NSDate *date = [self dateFromComponetsLikeDay:self.dateCompDay month:self.dateCompMonth andYear:self.dateCompYear];
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDate *dateMore = [cal dateByAddingUnit:NSCalendarUnitDay value:+1 toDate:date options:NSCalendarWrapComponents];
+    NSDate *dateMore = [date dateByAddingTimeInterval:1*24*60*60];
+    NSDate *dateTwoMore = [date dateByAddingTimeInterval:2*24*60*60];
     
-    if (dateMore.timeIntervalSince1970 > self.today.timeIntervalSince1970) {
-        return;
+    if (dateTwoMore.timeIntervalSince1970 >= self.today.timeIntervalSince1970) {
+        [self.dayMoreButton setEnabled:NO];
     }
     
     NSInteger day,month,year;
@@ -386,9 +387,9 @@
     
     [self updateRegisterToSelectDate];
     
-    NSString *text = [NSString stringWithFormat:@"%2ld/%2ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
+    NSString *text = [NSString stringWithFormat:@"%02ld/%02ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
     [self.dateTextView setText:text];
-
+    [self.dateTextField resignFirstResponder];
 }
 
 
