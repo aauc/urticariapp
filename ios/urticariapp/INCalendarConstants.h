@@ -19,8 +19,8 @@
 #define COLOR_LIGHTSYSTEMGRAY   [UIColor colorWithWhite:248.0/255 alpha:1]
 
 
-#define COLOR_DAY_WITH_REGISTER [UIColor redColor]
-#define COLOR_DAY_SELECTED  [UIColor orangeColor]
+#define COLOR_DAY_WITH_REGISTER [UIColor colorWithRed:240.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1]
+#define COLOR_DAY_SELECTED  [UIColor colorWithRed:55.0/255.0 green:155.0/255.0 blue:255.0/255.0 alpha:1]
 
 //Fonts
 

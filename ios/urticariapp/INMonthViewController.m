@@ -65,14 +65,11 @@
     if(self.mustUpdateTopLabel && [self currentMonday]) {
         NSString *stringTitle = [self.monthYearFormatter stringFromDate:self.currentMonday];
         [self modifyTopLabel:stringTitle];
-        
     }
 }
 
-- (void) modifyTopLabel:(NSString *)text
-{
+- (void) modifyTopLabel:(NSString *)text {
     [self.headerView monthTitle:text];
-
 }
 
 #pragma mark - SelectDay

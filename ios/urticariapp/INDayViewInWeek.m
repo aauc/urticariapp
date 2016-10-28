@@ -82,18 +82,17 @@
     
     self.dayNumberLabel.text = [formatter stringFromDate:date];
     
-    NSInteger component = [[NSCalendar currentCalendar] component:NSCalendarUnitWeekday fromDate:date];
-    if (component ==1 || component ==7) {
-      //  self.backgroundColor = COLOR_LIGHTSYSTEMGRAY;
-        self.dayNumberLabel.textColor = COLOR_GRAY;
-    } else {
-      //  self.backgroundColor = [UIColor whiteColor];
+//    NSInteger component = [[NSCalendar currentCalendar] component:NSCalendarUnitWeekday fromDate:date];
+//    if (component ==1 || component ==7) {
+//        self.backgroundColor = COLOR_LIGHTSYSTEMGRAY;
+//        self.dayNumberLabel.textColor = COLOR_GRAY;
+//    } else {
+//        self.backgroundColor = [UIColor whiteColor];
         self.dayNumberLabel.textColor = [UIColor blackColor];
-        
-    }
-    
+//    }
     
 }
+
 -(void)setIsEmpty:(BOOL)isEmpty
 {
     _isEmpty = isEmpty;
