@@ -8,8 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterActivityViewController">
             <connections>
                 <outlet property="angioView" destination="lbm-ic-Vxj" id="cQk-QU-MfW"/>
-                <outlet property="dateButton" destination="C1L-3d-GBi" id="WgO-lJ-lag"/>
-                <outlet property="dayButton" destination="C1L-3d-GBi" id="C4Z-ss-OlZ"/>
+                <outlet property="dateTextField" destination="eLx-cG-JTi" id="rxV-tk-hio"/>
+                <outlet property="dateTextView" destination="seQ-kQ-IqO" id="fu6-0n-e1q"/>
                 <outlet property="itch0" destination="fPC-f1-D95" id="U6i-Th-bWh"/>
                 <outlet property="itch1" destination="I4w-Zl-XAr" id="5AR-FX-XuU"/>
                 <outlet property="itch2" destination="ke8-0a-fzg" id="qsw-9N-abJ"/>
@@ -39,18 +39,23 @@
                                         <action selector="dayLess:" destination="-1" eventType="touchUpInside" id="HYI-0h-fr8"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-3d-GBi" userLabel="dateButton">
-                                    <state key="normal" title="30/12/2016"/>
-                                    <connections>
-                                        <action selector="selectDate:" destination="-1" eventType="touchUpInside" id="cVR-xa-HKk"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAq-V1-OBc" userLabel="dayMoreButton">
-                                    <state key="normal" image="dayMore"/>
-                                    <connections>
-                                        <action selector="dayMore:" destination="-1" eventType="touchUpInside" id="HnC-TB-h9u"/>
-                                    </connections>
-                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="99/99/9999" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-kQ-IqO" userLabel="dateTextView">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="7Cq-3D-7gr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLx-cG-JTi" userLabel="dateTextField">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="Jsn-mZ-VK8"/>
+                                        <constraint firstAttribute="width" constant="97" id="oNu-CB-z5B"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elija la fecha que desar registrar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-f2-ugW" userLabel="chooseADateLabel">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -353,6 +358,12 @@
                                         <constraint firstItem="jrJ-vz-CUa" firstAttribute="leading" secondItem="lvv-zz-LwS" secondAttribute="leading" id="vLn-P6-ZAH"/>
                                     </constraints>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAq-V1-OBc" userLabel="dayMoreButton">
+                                    <state key="normal" image="dayMore"/>
+                                    <connections>
+                                        <action selector="dayMore:" destination="-1" eventType="touchUpInside" id="HnC-TB-h9u"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -371,6 +382,7 @@
                                 <constraint firstItem="o53-Tf-fgc" firstAttribute="width" secondItem="y0L-rc-TSD" secondAttribute="width" id="CFx-2p-0Xo"/>
                                 <constraint firstItem="I4w-Zl-XAr" firstAttribute="width" secondItem="fPC-f1-D95" secondAttribute="width" id="COt-6k-Cfk"/>
                                 <constraint firstItem="Y8T-8H-GHk" firstAttribute="leading" secondItem="gVQ-f2-ugW" secondAttribute="leading" id="DuC-YV-xRY"/>
+                                <constraint firstItem="seQ-kQ-IqO" firstAttribute="centerY" secondItem="EUv-PD-M8c" secondAttribute="centerY" id="E64-Mo-fTy"/>
                                 <constraint firstAttribute="bottom" secondItem="y0L-rc-TSD" secondAttribute="bottom" constant="13" id="EgG-jD-PDQ"/>
                                 <constraint firstItem="o53-Tf-fgc" firstAttribute="height" secondItem="y0L-rc-TSD" secondAttribute="height" id="G7V-eS-cWV"/>
                                 <constraint firstItem="I4w-Zl-XAr" firstAttribute="height" secondItem="fPC-f1-D95" secondAttribute="height" id="GpW-LX-pph"/>
@@ -379,7 +391,9 @@
                                 <constraint firstItem="I4w-Zl-XAr" firstAttribute="leading" secondItem="fPC-f1-D95" secondAttribute="trailing" id="O61-sw-cDz"/>
                                 <constraint firstItem="aAq-V1-OBc" firstAttribute="centerY" secondItem="EUv-PD-M8c" secondAttribute="centerY" id="Opx-iT-2yd"/>
                                 <constraint firstItem="8kS-NY-x1F" firstAttribute="height" secondItem="hKx-iM-3rM" secondAttribute="height" id="QU9-BZ-LCc"/>
+                                <constraint firstItem="seQ-kQ-IqO" firstAttribute="leading" secondItem="EUv-PD-M8c" secondAttribute="trailing" constant="11" id="RUI-99-Fys"/>
                                 <constraint firstItem="nL8-rT-1MM" firstAttribute="leading" secondItem="22z-f0-wUo" secondAttribute="trailing" id="Sp7-kl-zIf"/>
+                                <constraint firstItem="eLx-cG-JTi" firstAttribute="centerY" secondItem="EUv-PD-M8c" secondAttribute="centerY" id="T0u-Zp-xZD"/>
                                 <constraint firstItem="Y8T-8H-GHk" firstAttribute="trailing" secondItem="gVQ-f2-ugW" secondAttribute="trailing" id="UgR-R1-Zid"/>
                                 <constraint firstItem="lbm-ic-Vxj" firstAttribute="leading" secondItem="o53-Tf-fgc" secondAttribute="trailing" id="VlP-ht-rDK"/>
                                 <constraint firstItem="x8o-ME-alg" firstAttribute="width" secondItem="ke8-0a-fzg" secondAttribute="width" id="WwC-0a-wgg"/>
@@ -393,13 +407,15 @@
                                 <constraint firstItem="22z-f0-wUo" firstAttribute="leading" secondItem="Y8T-8H-GHk" secondAttribute="leading" id="d4e-z8-1OH"/>
                                 <constraint firstItem="y0L-rc-TSD" firstAttribute="top" secondItem="fPC-f1-D95" secondAttribute="bottom" constant="11" id="dd2-nh-5nl"/>
                                 <constraint firstItem="gVQ-f2-ugW" firstAttribute="leading" secondItem="8hb-35-eaj" secondAttribute="leading" constant="16" id="euj-AT-dFp"/>
+                                <constraint firstItem="eLx-cG-JTi" firstAttribute="leading" secondItem="EUv-PD-M8c" secondAttribute="trailing" constant="11" id="f4U-Ot-UMX"/>
+                                <constraint firstItem="aAq-V1-OBc" firstAttribute="leading" secondItem="eLx-cG-JTi" secondAttribute="trailing" constant="8" id="ffs-Qg-G9L"/>
                                 <constraint firstItem="ke8-0a-fzg" firstAttribute="width" secondItem="I4w-Zl-XAr" secondAttribute="width" id="g1k-D2-8bV"/>
                                 <constraint firstItem="22z-f0-wUo" firstAttribute="top" secondItem="Y8T-8H-GHk" secondAttribute="bottom" constant="16" id="i6U-fe-C08"/>
                                 <constraint firstItem="fPC-f1-D95" firstAttribute="top" secondItem="nbN-kB-RgR" secondAttribute="bottom" constant="16" id="ibU-B1-hbv"/>
                                 <constraint firstItem="hKx-iM-3rM" firstAttribute="height" secondItem="nL8-rT-1MM" secondAttribute="height" id="ioA-PN-rdz"/>
                                 <constraint firstItem="nbN-kB-RgR" firstAttribute="top" secondItem="22z-f0-wUo" secondAttribute="bottom" constant="24" id="k5r-Xr-Eyb"/>
-                                <constraint firstItem="aAq-V1-OBc" firstAttribute="leading" secondItem="C1L-3d-GBi" secondAttribute="trailing" constant="13" id="kX4-rF-nEz"/>
                                 <constraint firstItem="y0L-rc-TSD" firstAttribute="leading" secondItem="fPC-f1-D95" secondAttribute="leading" id="mQS-Nj-LEo"/>
+                                <constraint firstItem="aAq-V1-OBc" firstAttribute="leading" secondItem="seQ-kQ-IqO" secondAttribute="trailing" constant="8" id="nRf-uL-kC5"/>
                                 <constraint firstItem="I4w-Zl-XAr" firstAttribute="top" secondItem="fPC-f1-D95" secondAttribute="top" id="nTI-ob-dI5"/>
                                 <constraint firstItem="nL8-rT-1MM" firstAttribute="width" secondItem="22z-f0-wUo" secondAttribute="width" id="nc8-Yq-Ecm"/>
                                 <constraint firstItem="lvv-zz-LwS" firstAttribute="width" secondItem="lbm-ic-Vxj" secondAttribute="width" id="oDY-G5-1an"/>
@@ -410,11 +426,9 @@
                                 <constraint firstItem="I4w-Zl-XAr" firstAttribute="leading" secondItem="o53-Tf-fgc" secondAttribute="leading" id="td2-It-UQ9"/>
                                 <constraint firstItem="nL8-rT-1MM" firstAttribute="height" secondItem="22z-f0-wUo" secondAttribute="height" id="u1q-64-Y64"/>
                                 <constraint firstItem="nbN-kB-RgR" firstAttribute="leading" secondItem="Y8T-8H-GHk" secondAttribute="leading" id="uoX-Hu-vMF"/>
-                                <constraint firstItem="C1L-3d-GBi" firstAttribute="centerY" secondItem="EUv-PD-M8c" secondAttribute="centerY" id="vJp-Wl-UzD"/>
                                 <constraint firstItem="x8o-ME-alg" firstAttribute="top" secondItem="ke8-0a-fzg" secondAttribute="top" id="wen-yu-L04"/>
                                 <constraint firstItem="hKx-iM-3rM" firstAttribute="leading" secondItem="nL8-rT-1MM" secondAttribute="trailing" id="xLl-vh-EMf"/>
                                 <constraint firstItem="EUv-PD-M8c" firstAttribute="leading" secondItem="8hb-35-eaj" secondAttribute="leading" constant="16" id="yOb-ie-F7b"/>
-                                <constraint firstItem="C1L-3d-GBi" firstAttribute="leading" secondItem="EUv-PD-M8c" secondAttribute="trailing" constant="11" id="ymj-n0-tZc"/>
                                 <constraint firstItem="8kS-NY-x1F" firstAttribute="trailing" secondItem="Y8T-8H-GHk" secondAttribute="trailing" id="yvD-7V-fgO"/>
                                 <constraint firstItem="ke8-0a-fzg" firstAttribute="top" secondItem="I4w-Zl-XAr" secondAttribute="top" id="zfU-Hh-TEH"/>
                             </constraints>

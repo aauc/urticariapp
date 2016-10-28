@@ -17,10 +17,10 @@
 
 #define COLOR_SELECT_CYAN  [UIColor cyanColor]
 
-@interface RegisterActivityViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-
-@property (strong, nonatomic) IBOutlet UIButton *dayButton;
-
+@interface RegisterActivityViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    UIDatePicker *datePicker;
+    NSDateFormatter *formatter;
+}
 
 @property (strong, nonatomic) IBOutlet UIView *wheals0;
 @property (strong, nonatomic) IBOutlet UIView *wheals1;
@@ -36,7 +36,8 @@
 
 @property (assign, nonatomic) NSInteger itchValue;
 
-@property (strong, nonatomic) IBOutlet UIButton *dateButton;
+@property (strong, nonatomic) IBOutlet UITextField *dateTextField;
+@property (strong, nonatomic) IBOutlet UITextView *dateTextView;
 
 //View to add Actions.
 
@@ -65,22 +66,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setTitle:@"Registrar Actividad"];
+    [self setTitle: NSLocalizedString(@"Registrar Actividad", nil)];
     
-    
-    for (NSInteger i=0; i<4; i++)
-    {
-    UIView *whealsView = [self valueForKey:[NSString stringWithFormat:@"wheals%ld",(long)i]];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectWheals:)];
-    whealsView.tag = i;
-    [whealsView addGestureRecognizer:tap];
-
-    UIView *itchView = [self valueForKey:[NSString stringWithFormat:@"itch%ld",(long)i]];
-    UITapGestureRecognizer *tapItch = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectItch:)];
-    itchView.tag = i;
-    [itchView addGestureRecognizer:tapItch];
+    for (NSInteger i=0; i<4; i++) {
+        UIView *whealsView = [self valueForKey:[NSString stringWithFormat:@"wheals%ld",(long)i]];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectWheals:)];
+        whealsView.tag = i;
+        [whealsView addGestureRecognizer:tap];
         
+        UIView *itchView = [self valueForKey:[NSString stringWithFormat:@"itch%ld",(long)i]];
+        UITapGestureRecognizer *tapItch = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectItch:)];
+        itchView.tag = i;
+        [itchView addGestureRecognizer:tapItch];
     }
+    
     self.wheals0.backgroundColor = COLOR_SELECT_CYAN;
     self.itch0.backgroundColor = COLOR_SELECT_CYAN;
     self.whealsValue = 0;
@@ -105,6 +104,9 @@
     
     
     // Start Today.
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    
     self.today = [NSDate date];
 
     NSInteger day,month,year;
@@ -115,14 +117,27 @@
     self.dateCompMonth = month;
     self.dateCompYear = year;
     
-    NSString *title = [NSString stringWithFormat:@"%2ld/%2ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
-    
-    [self.dayButton setTitle:title forState:UIControlStateNormal];
+    NSString *text = [NSString stringWithFormat:@"%2ld/%2ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
+    [self.dateTextView setText:text];
     
     self.hasChangedAndNeedSave = NO;
     //We look for register this day.
     [self updateRegisterToSelectDate];
 
+    //  UIDatePicker
+    datePicker = [[UIDatePicker alloc] init];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.maximumDate = [NSDate date];
+    [self.dateTextField setInputView:datePicker];
+    
+    CGFloat width = self.view.bounds.size.width;
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, width, 44)];
+    [toolbar setTintColor:[UIColor grayColor]];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"OK", nil) style:UIBarButtonItemStyleDone target:self action:@selector(selectADate)];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolbar setItems:[NSArray arrayWithObjects:space, doneButton, nil]];
+    [self.dateTextField setInputAccessoryView:toolbar];
+    [self.dateTextField setTintColor:[UIColor clearColor]];
     
 }
 
@@ -154,8 +169,7 @@
         
     }
     
-    for (NSInteger i=0; i<4; i++)
-    {
+    for (NSInteger i=0; i<4; i++) {
         UIView *whealsView = [self valueForKey:[NSString stringWithFormat:@"wheals%ld",(long)i]];
         if (i == self.whealsValue) {
             whealsView.backgroundColor = COLOR_SELECT_CYAN;
@@ -174,29 +188,29 @@
     
 }
 
--(void)viewDidDisappear:(BOOL)animated
-{
+-(void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
 
 }
--(void)checkToSave
-{
-    if (self.hasChangedAndNeedSave || self.reg.limitations.integerValue || self.reg.angioedema.integerValue)
-    {
+
+-(void)checkToSave {
+    if (self.hasChangedAndNeedSave || self.reg.limitations.integerValue || self.reg.angioedema.integerValue) {
         [[INDataManager sharedManager].managedObjectContext save:nil];
         self.hasChangedAndNeedSave = NO;
-    }
-    else
-    {
+    } else {
         if (self.reg)  [[INDataManager sharedManager].managedObjectContext deleteObject:self.reg];
     }
 }
 
 
-
 #pragma mark - Selectors
--(void)selectWheals:(UIGestureRecognizer *)gestt
-{
+
+- (void)selectADate {
+    [self.dateTextView setText:[NSString stringWithFormat:@"%@", [formatter stringFromDate:datePicker.date]]];
+    [self.dateTextField resignFirstResponder];
+}
+
+-(void)selectWheals:(UIGestureRecognizer *)gestt {
     if (self.whealsValue == gestt.view.tag) {
         return;
     }
@@ -282,8 +296,7 @@
     [self presentViewController:actionSheetController animated:YES completion:nil];
 }
 
--(void)selectAngio
-{
+-(void)selectAngio {
     INSelectAngLimiTVController *vController = [[INSelectAngLimiTVController alloc] init];
     vController.isAngio = YES;
     vController.reg = self.reg;
@@ -294,8 +307,8 @@
     
     [self presentViewController:navController animated:YES completion:nil];
 }
--(void)selectLimitations
-{
+
+-(void)selectLimitations {
     INSelectAngLimiTVController *vController = [[INSelectAngLimiTVController alloc] init];
     vController.reg = self.reg;
     vController.isAngio = NO;
@@ -309,8 +322,7 @@
 
 #pragma mark UIImagePicker
 
-- (UIImagePickerController *)imagePicker
-{
+- (UIImagePickerController *)imagePicker {
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.allowsEditing = YES;
     imagePickerController.delegate = self;
@@ -332,8 +344,7 @@
 
 #pragma mark - Date Buttons.
 
-- (IBAction)dayLess:(id)sender
-{
+- (IBAction)dayLess:(id)sender {
     NSDate *date = [self dateFromComponetsLikeDay:self.dateCompDay month:self.dateCompMonth andYear:self.dateCompYear];
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDate *dateLess = [cal dateByAddingUnit:NSCalendarUnitDay value:-1 toDate:date options:NSCalendarWrapComponents];
@@ -348,16 +359,15 @@
 
     [self updateRegisterToSelectDate];
     
-    NSString *title = [NSString stringWithFormat:@"%2ld/%2ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
-    
-    [self.dayButton setTitle:title forState:UIControlStateNormal];
-}
-- (IBAction)selectDate:(id)sender
-{
+    NSString *text = [NSString stringWithFormat:@"%2ld/%2ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
+    [self.dateTextView setText:text];
 }
 
-- (IBAction)dayMore:(id)sender
-{
+- (IBAction)selectDate:(id)sender {
+    
+}
+
+- (IBAction)dayMore:(id)sender {
     NSDate *date = [self dateFromComponetsLikeDay:self.dateCompDay month:self.dateCompMonth andYear:self.dateCompYear];
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDate *dateMore = [cal dateByAddingUnit:NSCalendarUnitDay value:+1 toDate:date options:NSCalendarWrapComponents];
@@ -376,15 +386,15 @@
     
     [self updateRegisterToSelectDate];
     
-    NSString *title = [NSString stringWithFormat:@"%2ld/%2ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
-    
-    [self.dayButton setTitle:title forState:UIControlStateNormal];
+    NSString *text = [NSString stringWithFormat:@"%2ld/%2ld/%4ld",(long)self.dateCompDay, (long)self.dateCompMonth, (long)self.dateCompYear];
+    [self.dateTextView setText:text];
 
 }
 
+
 #pragma mark - Date Calculations.
--(void)componentsDay:(NSInteger *)day month:(NSInteger *)month andYear:(NSInteger *)year fromDate:(NSDate *)date
-{
+
+-(void)componentsDay:(NSInteger *)day month:(NSInteger *)month andYear:(NSInteger *)year fromDate:(NSDate *)date {
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *comp = [cal components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date];
     
@@ -393,8 +403,7 @@
     *year = comp.year;
 }
 
--(NSDate *)dateFromComponetsLikeDay:(NSInteger)day month:(NSInteger)month andYear:(NSInteger)year
-{
+-(NSDate *)dateFromComponetsLikeDay:(NSInteger)day month:(NSInteger)month andYear:(NSInteger)year {
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     components.day = day;
