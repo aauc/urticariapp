@@ -28,13 +28,6 @@
     [self.textLabel sizeToFit];
     [self.closeButton setTitle:NSLocalizedString(@"Cerrar", nil) forState:UIControlStateNormal];
     
-    /*CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    if (width > 320 || self.type == 0) {
-        [self.view removeConstraint:self.horizontalSpacingBetweenTitleAndCloseConstraint];
-    } else {
-        [self.view removeConstraint:self.centerLabelConstraint];
-    }*/
-    
 }
 
 - (void)didReceiveMemoryWarning {
