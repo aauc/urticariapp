@@ -24,7 +24,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setTitle:@"UrticariaApp"];
+    [self setTitle: NSLocalizedString(@"UrticariaApp", nil)];
+    [self.registerLabel setText:NSLocalizedString(@"Registrar actividad", nil)];
+    [self.historyLabel setText:NSLocalizedString(@"Historial", nil)];
+    [self.urticariaInfoLabel setText:NSLocalizedString(@"La Urticaria", nil)];
+    [self.joinUsLabel setText:NSLocalizedString(@"Hazte socio/a", nil)];
     
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStyleDone target:self action:@selector(openSettings:)];
     self.navigationItem.rightBarButtonItem = settingsButton;

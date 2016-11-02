@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    tableData = [NSArray arrayWithObjects:@"Sugerencias", @"Limitación de responsabilidad", nil];
+    tableData = [NSArray arrayWithObjects: NSLocalizedString(@"Sugerencias", nil), NSLocalizedString(@"Limitación de responsabilidad", nil), nil];
     
     [self.settingsTableView setDelegate:self];
     [self.settingsTableView setDataSource:self];
@@ -59,11 +59,11 @@
     //  Open Modal
     ModalViewController *modalViewController = [[ModalViewController alloc] init];
     if (indexPath.row == 0) {
-        modalViewController.title = [tableData objectAtIndex:indexPath.row];
-        modalViewController.text = @"¿Tienes alguna idea?\nEstaremos encantados de escucharla, manda un correo electrónico a hola@urticariacronica.org con tus sugerencias para mejorar la aplicación.\n¡Gracias!";
+        modalViewController.type = 0;
+        modalViewController.titleModal = [tableData objectAtIndex:indexPath.row];
     } else {
-        modalViewController.title = [tableData objectAtIndex:indexPath.row];
-        modalViewController.text = @"Esta aplicación está creada para que los afectados de urticaria puedan registrar el progreso de la enfermedad para su uso personal. \nEl usuario es el único propietario y responsable de los datos guardados mediante esta aplicación. Los datos se guardan únicamente en la memoria de su teléfono móvil: no se transfieren a ningún servidor ni pueden ser leídos por otras aplicaciones a no ser que el mismo usuario decida exportarlos. \nLa AAUC no evalúa, aprueba o recomienda ninguna medicación, producto, equipo o tratamiento particular.";
+        modalViewController.type = 1;
+        modalViewController.titleModal = [tableData objectAtIndex:indexPath.row];
     }
     [self presentViewController:modalViewController animated:YES completion:nil];
 }

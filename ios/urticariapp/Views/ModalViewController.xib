@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalViewController">
             <connections>
+                <outlet property="closeButton" destination="0UW-50-zzh" id="QAv-Al-xdp"/>
                 <outlet property="textLabel" destination="cCV-a1-koR" id="FK3-nb-jyC"/>
                 <outlet property="titleLabel" destination="FmM-Pe-Ex0" id="1Di-f0-aJ1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -14,16 +18,18 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IRR-t7-JKn" userLabel="headerView">
-                    <frame key="frameInset" width="375" height="64"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRR-t7-JKn" userLabel="headerView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UW-50-zzh" userLabel="closeButton">
-                            <frame key="frameInset" minX="313" minY="24" width="44" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UW-50-zzh" userLabel="closeButton">
+                            <rect key="frame" x="348" y="24" width="50" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="b2u-ae-vZL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="Cerrar">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -31,9 +37,8 @@
                                 <action selector="clickOnCloseButton:" destination="-1" eventType="touchUpInside" id="Zqx-h1-gt1"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmM-Pe-Ex0" userLabel="titleLabel">
-                            <frame key="frameInset" minX="63" minY="29" width="249" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugerencias" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmM-Pe-Ex0" userLabel="titleLabel">
+                            <rect key="frame" x="160" y="29" width="95" height="21"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,9 +47,18 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="0UW-50-zzh" firstAttribute="top" secondItem="IRR-t7-JKn" secondAttribute="top" constant="24" id="5yS-QK-7Up"/>
+                        <constraint firstItem="0UW-50-zzh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FmM-Pe-Ex0" secondAttribute="trailing" constant="5" id="6Hg-Mq-soY"/>
+                        <constraint firstItem="FmM-Pe-Ex0" firstAttribute="top" secondItem="IRR-t7-JKn" secondAttribute="top" constant="29" id="8Eo-1s-6TX"/>
+                        <constraint firstAttribute="height" constant="64" id="c2N-1g-5FW"/>
+                        <constraint firstItem="FmM-Pe-Ex0" firstAttribute="centerX" secondItem="IRR-t7-JKn" secondAttribute="centerX" priority="999" id="cNt-zE-AHF"/>
+                        <constraint firstAttribute="trailing" secondItem="0UW-50-zzh" secondAttribute="trailing" constant="16" id="ld9-m5-J2R"/>
+                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCV-a1-koR" userLabel="textLabel">
-                    <mutableString key="text">Lorem fistrum papaar papaar caballo blanco caballo negroorl ese pedazo de ese hombree torpedo al ataquerl. No te digo trigo por no llamarte Rodrigor a gramenawer apetecan hasta luego Lucas. Te va a hasé pupitaa de la pradera qué dise usteer ese hombree ese que llega pupita. Ese hombree pupita fistro qué dise usteer. A wan a gramenawer fistro jarl benemeritaar ahorarr condemor. Papaar papaar no te digo trigo por no llamarte Rodrigor a peich ese que llega condemor mamaar ese que llega diodenoo por la gloria de mi madre.</mutableString>
+                    <rect key="frame" x="16" y="80" width="382" height="243.66666666666669"/>
+                    <string key="text">Lorem fistrum papaar papaar caballo blanco caballo negroorl ese pedazo de ese hombree torpedo al ataquerl. No te digo trigo por no llamarte Rodrigor a gramenawer apetecan hasta luego Lucas. Te va a hasé pupitaa de la pradera qué dise usteer ese hombree ese que llega pupita. Ese hombree pupita fistro qué dise usteer. A wan a gramenawer fistro jarl benemeritaar ahorarr condemor. Papaar papaar no te digo trigo por no llamarte Rodrigor a peich ese que llega condemor mamaar ese que llega diodenoo por la gloria de mi madre.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -55,10 +69,13 @@
                 <constraint firstItem="cCV-a1-koR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="MnU-vE-PjR"/>
                 <constraint firstAttribute="trailing" secondItem="cCV-a1-koR" secondAttribute="trailing" constant="16" id="N9n-9i-Uhp"/>
                 <constraint firstItem="cCV-a1-koR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="PzY-U4-VAc"/>
+                <constraint firstItem="IRR-t7-JKn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TDq-mx-tyP"/>
+                <constraint firstItem="IRR-t7-JKn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Txm-KA-U5t"/>
+                <constraint firstAttribute="trailing" secondItem="IRR-t7-JKn" secondAttribute="trailing" id="twx-F8-nLr"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
-            <point key="canvasLocation" x="25.5" y="52.5"/>
+            <point key="canvasLocation" x="25" y="52"/>
         </view>
     </objects>
 </document>

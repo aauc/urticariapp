@@ -16,6 +16,10 @@
 @property (strong, nonatomic) IBOutlet UIView *urticariaInfoView;
 @property (strong, nonatomic) IBOutlet UIView *joinUsView;
 
+@property (strong, nonatomic) IBOutlet UILabel *registerLabel;
+@property (strong, nonatomic) IBOutlet UILabel *historyLabel;
+@property (strong, nonatomic) IBOutlet UILabel *urticariaInfoLabel;
+@property (strong, nonatomic) IBOutlet UILabel *joinUsLabel;
 
 
 

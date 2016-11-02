@@ -32,7 +32,7 @@
             return NSLocalizedString(@"Labios", nil);
             break;
         case INRegisterAngioedemaTongue:
-            return NSLocalizedString(@"Legua", nil);
+            return NSLocalizedString(@"Lengua", nil);
             break;
         case INRegisterAngioedemaEyes:
             return NSLocalizedString(@"Ojos", nil);
@@ -47,7 +47,7 @@
             return NSLocalizedString(@"Manos", nil);
             break;
         case INRegisterAngioedemaFoots:
-            return NSLocalizedString(@"Píes", nil);
+            return NSLocalizedString(@"Pies", nil);
             break;
         case INRegisterAngioedemaGenitals:
             return NSLocalizedString(@"Genitales", nil);

@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterActivityViewController">
             <connections>
+                <outlet property="angioLabel" destination="qPL-pD-xfj" id="NlO-BM-prh"/>
                 <outlet property="angioView" destination="lbm-ic-Vxj" id="cQk-QU-MfW"/>
+                <outlet property="chooseADateLabel" destination="gVQ-f2-ugW" id="Zdj-l5-qlr"/>
                 <outlet property="dateTextField" destination="eLx-cG-JTi" id="rxV-tk-hio"/>
                 <outlet property="dateTextView" destination="seQ-kQ-IqO" id="fu6-0n-e1q"/>
                 <outlet property="dayMoreButton" destination="aAq-V1-OBc" id="2LA-d9-SNI"/>
+                <outlet property="howManyWhealsLabel" destination="Y8T-8H-GHk" id="yi2-8r-qta"/>
                 <outlet property="itch0" destination="fPC-f1-D95" id="U6i-Th-bWh"/>
                 <outlet property="itch1" destination="I4w-Zl-XAr" id="5AR-FX-XuU"/>
                 <outlet property="itch2" destination="ke8-0a-fzg" id="qsw-9N-abJ"/>
                 <outlet property="itch3" destination="x8o-ME-alg" id="Y52-ec-1uf"/>
+                <outlet property="itchLevelLabel" destination="nbN-kB-RgR" id="hYo-iS-9A4"/>
+                <outlet property="lebel0WhealLabel" destination="iiy-PP-C5M" id="aJw-4X-bfD"/>
+                <outlet property="level0ItchLabel" destination="r9u-Tl-Agx" id="J9w-9w-LiY"/>
+                <outlet property="level1ItchLabel" destination="DVC-7B-hvs" id="Umg-Wq-RTZ"/>
+                <outlet property="level2ItchLabel" destination="zXD-bv-y38" id="hdi-k1-59c"/>
+                <outlet property="level3ItchLabel" destination="Y8n-ZG-eQx" id="YmN-ac-945"/>
+                <outlet property="limitationsLabel" destination="jrJ-vz-CUa" id="SY5-Vz-Cwp"/>
                 <outlet property="limitationsView" destination="lvv-zz-LwS" id="B9u-vY-CKI"/>
+                <outlet property="noteLabel" destination="ftF-Hc-rek" id="aHf-yg-UkH"/>
                 <outlet property="noteView" destination="y0L-rc-TSD" id="EgC-iU-aE0"/>
+                <outlet property="photoLabel" destination="dbw-2W-k6q" id="X4W-mb-4EM"/>
                 <outlet property="photoView" destination="o53-Tf-fgc" id="KvG-J5-qd0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="wheals0" destination="22z-f0-wUo" id="pFx-6h-Pua"/>
@@ -31,16 +46,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89Z-fi-Rps" userLabel="scrollView">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hb-35-eaj" userLabel="contentView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-PD-M8c" userLabel="dayLessButton">
+                                    <rect key="frame" x="16" y="16" width="48" height="48"/>
                                     <state key="normal" image="dayLess"/>
                                     <connections>
                                         <action selector="dayLess:" destination="-1" eventType="touchUpInside" id="HYI-0h-fr8"/>
                                     </connections>
                                 </button>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="99/99/9999" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-kQ-IqO" userLabel="dateTextView">
+                                    <rect key="frame" x="75" y="23.5" width="97" height="33"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="33" id="7Cq-3D-7gr"/>
@@ -49,6 +68,7 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLx-cG-JTi" userLabel="dateTextField">
+                                    <rect key="frame" x="75" y="18" width="97" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="Jsn-mZ-VK8"/>
                                         <constraint firstAttribute="width" constant="97" id="oNu-CB-z5B"/>
@@ -57,25 +77,30 @@
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elija la fecha que desar registrar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-f2-ugW" userLabel="chooseADateLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elija la fecha que deseas registrar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-f2-ugW" userLabel="chooseADateLabel">
+                                    <rect key="frame" x="16" y="64" width="343" height="20"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántas ronchas tienes?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8T-8H-GHk" userLabel="howManyLabel">
+                                    <rect key="frame" x="16" y="100" width="343" height="21.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22z-f0-wUo" userLabel="level0WhealsView">
+                                    <rect key="frame" x="16" y="137.5" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel0" translatesAutoresizingMaskIntoConstraints="NO" id="pQN-lk-fNb" userLabel="level0WhealsImageVIew">
+                                            <rect key="frame" x="19" y="3" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="48" id="Ut9-GT-5Rg"/>
                                                 <constraint firstAttribute="height" constant="48" id="kf6-o8-Tfp"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ninguna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiy-PP-C5M" userLabel="level0WhealLabel">
+                                            <rect key="frame" x="16" y="51" width="53.5" height="17.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -91,14 +116,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nL8-rT-1MM" userLabel="level1WhealsView">
+                                    <rect key="frame" x="102" y="137.5" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel1" translatesAutoresizingMaskIntoConstraints="NO" id="aNL-ad-eZO" userLabel="level1WhealsImageVIew">
+                                            <rect key="frame" x="18.5" y="3" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="Rhd-y8-iyY"/>
                                                 <constraint firstAttribute="width" constant="48" id="zKb-K6-jKm"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bge-4Y-sT7" userLabel="level1WhealLabel">
+                                            <rect key="frame" x="29.5" y="51" width="26" height="17.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -113,14 +141,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKx-iM-3rM" userLabel="level2WhealsView">
+                                    <rect key="frame" x="187.5" y="137.5" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel2" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-aq-EYU" userLabel="level2WhealsImageVIew">
+                                            <rect key="frame" x="19" y="3" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="4Rp-5j-RvD"/>
                                                 <constraint firstAttribute="width" constant="48" id="hxF-PH-XY7"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20-50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9u-lm-KS7" userLabel="level2WhealLabel">
+                                            <rect key="frame" x="23" y="51" width="39.5" height="17.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -135,14 +166,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-NY-x1F" userLabel="level3WhealsView">
+                                    <rect key="frame" x="273.5" y="137.5" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel3" translatesAutoresizingMaskIntoConstraints="NO" id="Q7H-CH-7IA" userLabel="level3WhealsImageVIew">
+                                            <rect key="frame" x="18.5" y="3" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="48" id="3JW-qS-dyP"/>
                                                 <constraint firstAttribute="height" constant="48" id="XOK-MC-Vg6"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9D-h6-FeK" userLabel="level3WhealLabel">
+                                            <rect key="frame" x="29.5" y="51" width="26" height="17.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -157,19 +191,23 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cómo consideras el picor?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbN-kB-RgR" userLabel="itchLabel">
+                                    <rect key="frame" x="16" y="238.5" width="343" height="21.5"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPC-f1-D95" userLabel="level0ItchView">
+                                    <rect key="frame" x="16" y="276" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel0" translatesAutoresizingMaskIntoConstraints="NO" id="fyz-qF-MiW" userLabel="level0ItchImageView">
+                                            <rect key="frame" x="19" y="3" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="jaQ-PX-lVH"/>
                                                 <constraint firstAttribute="width" constant="48" id="q6x-sp-Cd7"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no pica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9u-Tl-Agx" userLabel="level0ItchLabel">
+                                            <rect key="frame" x="18" y="51" width="49.5" height="17.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -185,14 +223,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4w-Zl-XAr" userLabel="level1ItchView">
+                                    <rect key="frame" x="102" y="276" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel1" translatesAutoresizingMaskIntoConstraints="NO" id="noU-N0-ZTD" userLabel="level1ItchImageVIew">
+                                            <rect key="frame" x="18.5" y="3" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="9Le-fK-WFh"/>
                                                 <constraint firstAttribute="width" constant="48" id="xlX-3Z-3r4"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="leve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVC-7B-hvs" userLabel="level1ItchLabel">
+                                            <rect key="frame" x="29" y="51" width="27" height="17.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -207,14 +248,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-0a-fzg" userLabel="level2ItchView">
+                                    <rect key="frame" x="187.5" y="276" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel2" translatesAutoresizingMaskIntoConstraints="NO" id="Cid-tE-1kw" userLabel="level2ItchImageVIew">
+                                            <rect key="frame" x="19" y="3" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="48" id="bh5-BO-C72"/>
                                                 <constraint firstAttribute="height" constant="48" id="v1G-fO-WAM"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moderado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXD-bv-y38" userLabel="level2ItchLabel">
+                                            <rect key="frame" x="8.5" y="51" width="69" height="17.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -229,14 +273,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8o-ME-alg" userLabel="level3ItchView">
+                                    <rect key="frame" x="273.5" y="276" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel3" translatesAutoresizingMaskIntoConstraints="NO" id="R6Q-Hu-jOO" userLabel="level3ItchImageVIew">
+                                            <rect key="frame" x="18.5" y="3" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="nUB-M5-dQ7"/>
                                                 <constraint firstAttribute="width" constant="48" id="sz3-Xw-pLa"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="severo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8n-ZG-eQx" userLabel="level3ItchLabel">
+                                            <rect key="frame" x="20.5" y="51" width="44.5" height="17.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -251,14 +298,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0L-rc-TSD" userLabel="noteView">
+                                    <rect key="frame" x="16" y="364" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note" translatesAutoresizingMaskIntoConstraints="NO" id="QOH-Gq-iHO" userLabel="noteImageView">
+                                            <rect key="frame" x="19" y="0.0" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="48" id="Ocp-AT-DgS"/>
                                                 <constraint firstAttribute="height" constant="48" id="xw4-ns-cRz"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Añadir nota" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftF-Hc-rek" userLabel="noteLabel">
+                                            <rect key="frame" x="0.0" y="48" width="86" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="ZKb-NM-Nkd"/>
                                             </constraints>
@@ -279,14 +329,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o53-Tf-fgc" userLabel="photoView">
+                                    <rect key="frame" x="102" y="364" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="jNh-hN-5kt" userLabel="photoImageView">
+                                            <rect key="frame" x="18.5" y="0.0" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="OA9-0y-tRF"/>
                                                 <constraint firstAttribute="width" constant="48" id="dkn-Sk-5kX"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbw-2W-k6q" userLabel="photoLabel">
+                                            <rect key="frame" x="0.0" y="48" width="85.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="3fg-Hj-cpA"/>
                                             </constraints>
@@ -306,14 +359,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbm-ic-Vxj" userLabel="angioView">
+                                    <rect key="frame" x="187.5" y="364" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angio" translatesAutoresizingMaskIntoConstraints="NO" id="SmJ-p0-sus" userLabel="angioImageView">
+                                            <rect key="frame" x="19" y="0.0" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="M8v-Xq-tLz"/>
                                                 <constraint firstAttribute="width" constant="48" id="WZT-Yw-vPw"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angioedema" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPL-pD-xfj" userLabel="angioLabel">
+                                            <rect key="frame" x="0.0" y="48" width="86" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="HIV-hb-Ncn"/>
                                             </constraints>
@@ -333,14 +389,17 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvv-zz-LwS" userLabel="limitationsView">
+                                    <rect key="frame" x="273.5" y="364" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="limitations" translatesAutoresizingMaskIntoConstraints="NO" id="bG2-8D-BIT" userLabel="limitationsImageView">
+                                            <rect key="frame" x="18.5" y="0.0" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="48" id="jsd-di-cZQ"/>
                                                 <constraint firstAttribute="height" constant="48" id="yxN-qO-pT1"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limitaciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrJ-vz-CUa" userLabel="limitationsLabel">
+                                            <rect key="frame" x="0.0" y="48" width="85.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="QKy-e2-K70"/>
                                             </constraints>
@@ -360,6 +419,7 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAq-V1-OBc" userLabel="dayMoreButton">
+                                    <rect key="frame" x="180" y="22" width="36" height="36"/>
                                     <state key="normal" image="dayMore"/>
                                     <connections>
                                         <action selector="dayMore:" destination="-1" eventType="touchUpInside" id="HnC-TB-h9u"/>

@@ -68,6 +68,18 @@
     // Do any additional setup after loading the view from its nib.
     
     [self setTitle: NSLocalizedString(@"Registrar Actividad", nil)];
+    [self.chooseADateLabel setText: NSLocalizedString(@"Elija la fecha que deseas registrar", nil)];
+    [self.howManyWhealsLabel setText: NSLocalizedString(@"¿Cuántas ronchas tienes?", nil)];
+    [self.lebel0WhealLabel setText: NSLocalizedString(@"ninguna", nil)];
+    [self.itchLevelLabel setText: NSLocalizedString(@"¿Cómo consideras el picor?", nil)];
+    [self.level0ItchLabel setText: NSLocalizedString(@"no pica", nil)];
+    [self.level1ItchLabel setText: NSLocalizedString(@"leve", nil)];
+    [self.level2ItchLabel setText: NSLocalizedString(@"moderado", nil)];
+    [self.level3ItchLabel setText: NSLocalizedString(@"severo", nil)];
+    [self.noteLabel setText: NSLocalizedString(@"Añadir nota", nil)];
+    [self.photoLabel setText: NSLocalizedString(@"foto", nil)];
+    [self.angioLabel setText: NSLocalizedString(@"Angioedema", nil)];
+    [self.limitationsLabel setText: NSLocalizedString(@"Limitaciones", nil)];
     
     for (NSInteger i=0; i<4; i++) {
         UIView *whealsView = [self valueForKey:[NSString stringWithFormat:@"wheals%ld",(long)i]];

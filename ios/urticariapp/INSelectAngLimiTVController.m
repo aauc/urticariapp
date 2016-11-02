@@ -20,14 +20,14 @@
     [super viewDidLoad];
     
     if (self.isAngio) {
-        self.title = NSLocalizedString(@"Angionema", nil);
+        self.title = NSLocalizedString(@"Angioedema", nil);
     }
     else
     {
         self.title = NSLocalizedString(@"Limitaciones", nil);
     }
     
-    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cerrar", nil) style:UIBarButtonItemStylePlain target:self action:@selector(closePopover)];
+    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Hecho", nil) style:UIBarButtonItemStylePlain target:self action:@selector(closePopover)];
     self.navigationItem.leftBarButtonItem = closeButton;
 }
 

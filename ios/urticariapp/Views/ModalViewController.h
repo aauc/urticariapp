@@ -10,11 +10,12 @@
 
 @interface ModalViewController : UIViewController
 
-@property (nonatomic) NSString *title;
-@property (nonatomic) NSString *text;
+@property (nonatomic) int type;
+@property (nonatomic) NSString *titleModal;
 
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIButton *closeButton;
 
 - (IBAction)clickOnCloseButton:(id)sender;
 
