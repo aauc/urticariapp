@@ -17,9 +17,7 @@
 @property (nonatomic, strong) UILabel *dayNumberLabel;
 
 
-
 @end
-
 
 
 @implementation INDayViewInWeek
@@ -31,7 +29,6 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        
         UIView *lineV=[[UIView alloc] init];
         UIView *lineH = [[UIView alloc] init];
         self.dayNumberLabel = [[UILabel alloc] init];
@@ -108,10 +105,12 @@
 
 -(void)selectDay:(UIButton *)buttt
 {
-    self.backgroundColor = COLOR_DAY_SELECTED;
-    NSDictionary *userInfo = @{@"register":self.reg,
-                               @"day":self};
-    NSNotification *not = [NSNotification notificationWithName:@"INDayViewSelectedNotification" object:self userInfo:userInfo];
-    [[NSNotificationCenter defaultCenter] postNotification:not];
+    if (!self.isEmpty) {
+        self.backgroundColor = COLOR_DAY_SELECTED;
+        NSDictionary *userInfo = @{@"register":self.reg,
+                                   @"day":self};
+        NSNotification *not = [NSNotification notificationWithName:@"INDayViewSelectedNotification" object:self userInfo:userInfo];
+        [[NSNotificationCenter defaultCenter] postNotification:not];
+    }
 }
 @end

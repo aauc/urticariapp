@@ -15,12 +15,9 @@
 @interface INDayViewInWeek : UIButton
 
 @property (nonatomic,strong) NSDate *date;
-
-@property (nonatomic)BOOL isEmpty;
+@property (nonatomic) BOOL isEmpty;
 
 @property (nonatomic, strong) INRegister *reg;
-
-
 
 
 @end

@@ -75,8 +75,6 @@
         
         [self addConstraints:constraints];
         
-
-        
     }
     return self;
 }
@@ -115,10 +113,6 @@
     [endDayComponents setMonth:todayComponents.month];
     [endDayComponents setYear:todayComponents.year];
     NSDate *endDate = [[NSCalendar currentCalendar] dateFromComponents:endDayComponents];
-    
-    
-    
-   
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     [fetchRequest setEntity:[NSEntityDescription entityForName:@"INRegister" inManagedObjectContext:[INDataManager sharedManager].managedObjectContext]];
@@ -169,9 +163,6 @@
             self.sundayView.reg = reg;
         }
     }
-     
-    
-    
 }
 
 -(void)setIsFirstWeek:(BOOL)isFirstWeek
@@ -182,6 +173,7 @@
     }
     
 }
+
 -(void)setIsLastWeek:(BOOL)isLastWeek
 {
     _isLastWeek = isLastWeek;
@@ -190,6 +182,7 @@
     }
     
 }
+
 -(void)hiddenDaysOutOfMonth
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
@@ -210,39 +203,38 @@
     
 }
 
-
-
 -(void)hiddenDay:(NSInteger)day
 {
     switch (day) {
-            case 1:
+        case 1:
             self.mondayView.isEmpty = YES;
+            self.mondayView.backgroundColor = [UIColor grayColor];
             break;
-            case 2:
+        case 2:
             self.tuesdayView.isEmpty = YES;
+            self.tuesdayView.backgroundColor = [UIColor grayColor];
             break;
-            case 3:
+        case 3:
             self.wednesdayView.isEmpty = YES;
+            self.wednesdayView.backgroundColor = [UIColor grayColor];
             break;
-            case 4:
+        case 4:
             self.thursdayView.isEmpty = YES;
+            self.thursdayView.backgroundColor = [UIColor grayColor];
             break;
-            case 5:
+        case 5:
             self.fridayView.isEmpty = YES;
+            self.fridayView.backgroundColor = [UIColor grayColor];
             break;
-            case 6:
+        case 6:
             self.saturdayView.isEmpty = YES;
+            self.saturdayView.backgroundColor = [UIColor grayColor];
             break;
-            case 7:
+        case 7:
             self.sundayView.isEmpty = YES;
+            self.sundayView.backgroundColor = [UIColor grayColor];
             break;
-            
-            
     }
 }
-
-
-
-
 
 @end
