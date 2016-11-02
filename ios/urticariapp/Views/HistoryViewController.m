@@ -23,7 +23,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *whelasImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *itchImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *angioImageView;
-@property (strong, nonatomic) IBOutlet UILabel *infoLabel;
 
 @property (strong, nonatomic) INRegister *selectedRegister;
 
@@ -38,6 +37,10 @@
     // Do any additional setup after loading the view from its nib.
     
     [self setTitle:NSLocalizedString(@"Historial", nil)];
+    [self.whealsLabel setText: NSLocalizedString(@"Ronchas", nil)];;
+    [self.itchLabel setText: NSLocalizedString(@"Picor", nil)];;
+    [self.angioLabel setText: NSLocalizedString(@"Angioedema", nil)];;
+    [self.infoLabel setText: NSLocalizedString(@"Selecciona una fecha resaltada para consultar el nivel UAS que registraste para ese día.", nil)];;
     
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Exportar", nil) style:UIBarButtonItemStyleDone target:self action:@selector(exportAsCsv)];
     self.navigationItem.rightBarButtonItem = settingsButton;

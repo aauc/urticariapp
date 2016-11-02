@@ -15,7 +15,7 @@
                 <outlet property="chooseADateLabel" destination="gVQ-f2-ugW" id="Zdj-l5-qlr"/>
                 <outlet property="dateTextField" destination="eLx-cG-JTi" id="rxV-tk-hio"/>
                 <outlet property="dateTextView" destination="seQ-kQ-IqO" id="fu6-0n-e1q"/>
-                <outlet property="dayMoreButton" destination="aAq-V1-OBc" id="2LA-d9-SNI"/>
+                <outlet property="dayMoreButton" destination="Xgd-kd-mbX" id="7jW-hZ-h8R"/>
                 <outlet property="howManyWhealsLabel" destination="Y8T-8H-GHk" id="yi2-8r-qta"/>
                 <outlet property="itch0" destination="fPC-f1-D95" id="U6i-Th-bWh"/>
                 <outlet property="itch1" destination="I4w-Zl-XAr" id="5AR-FX-XuU"/>
@@ -49,7 +49,7 @@
                     <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hb-35-eaj" userLabel="contentView">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="454"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="455"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-PD-M8c" userLabel="dayLessButton">
                                     <rect key="frame" x="16" y="16" width="48" height="48"/>
@@ -59,7 +59,7 @@
                                     </connections>
                                 </button>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="99/99/9999" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-kQ-IqO" userLabel="dateTextView">
-                                    <rect key="frame" x="75" y="23.5" width="97" height="33"/>
+                                    <rect key="frame" x="75" y="24" width="97" height="33"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="33" id="7Cq-3D-7gr"/>
@@ -84,13 +84,13 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántas ronchas tienes?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8T-8H-GHk" userLabel="howManyLabel">
-                                    <rect key="frame" x="16" y="100" width="343" height="21.5"/>
+                                    <rect key="frame" x="16" y="100" width="343" height="22"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22z-f0-wUo" userLabel="level0WhealsView">
-                                    <rect key="frame" x="16" y="137.5" width="86" height="77"/>
+                                    <rect key="frame" x="16" y="138" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel0" translatesAutoresizingMaskIntoConstraints="NO" id="pQN-lk-fNb" userLabel="level0WhealsImageVIew">
                                             <rect key="frame" x="19" y="3" width="48" height="48"/>
@@ -100,7 +100,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ninguna" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiy-PP-C5M" userLabel="level0WhealLabel">
-                                            <rect key="frame" x="16" y="51" width="53.5" height="17.5"/>
+                                            <rect key="frame" x="16" y="51" width="54" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -116,7 +116,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nL8-rT-1MM" userLabel="level1WhealsView">
-                                    <rect key="frame" x="102" y="137.5" width="85.5" height="77"/>
+                                    <rect key="frame" x="102" y="138" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel1" translatesAutoresizingMaskIntoConstraints="NO" id="aNL-ad-eZO" userLabel="level1WhealsImageVIew">
                                             <rect key="frame" x="18.5" y="3" width="48" height="48"/>
@@ -126,7 +126,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bge-4Y-sT7" userLabel="level1WhealLabel">
-                                            <rect key="frame" x="29.5" y="51" width="26" height="17.5"/>
+                                            <rect key="frame" x="29.5" y="51" width="26" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -141,7 +141,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKx-iM-3rM" userLabel="level2WhealsView">
-                                    <rect key="frame" x="187.5" y="137.5" width="86" height="77"/>
+                                    <rect key="frame" x="187.5" y="138" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel2" translatesAutoresizingMaskIntoConstraints="NO" id="LIx-aq-EYU" userLabel="level2WhealsImageVIew">
                                             <rect key="frame" x="19" y="3" width="48" height="48"/>
@@ -151,7 +151,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20-50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9u-lm-KS7" userLabel="level2WhealLabel">
-                                            <rect key="frame" x="23" y="51" width="39.5" height="17.5"/>
+                                            <rect key="frame" x="23" y="51" width="40" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -166,7 +166,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kS-NY-x1F" userLabel="level3WhealsView">
-                                    <rect key="frame" x="273.5" y="137.5" width="85.5" height="77"/>
+                                    <rect key="frame" x="273.5" y="138" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel3" translatesAutoresizingMaskIntoConstraints="NO" id="Q7H-CH-7IA" userLabel="level3WhealsImageVIew">
                                             <rect key="frame" x="18.5" y="3" width="48" height="48"/>
@@ -176,7 +176,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9D-h6-FeK" userLabel="level3WhealLabel">
-                                            <rect key="frame" x="29.5" y="51" width="26" height="17.5"/>
+                                            <rect key="frame" x="29.5" y="51" width="26" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -191,13 +191,13 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cómo consideras el picor?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbN-kB-RgR" userLabel="itchLabel">
-                                    <rect key="frame" x="16" y="238.5" width="343" height="21.5"/>
+                                    <rect key="frame" x="16" y="239" width="343" height="22"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPC-f1-D95" userLabel="level0ItchView">
-                                    <rect key="frame" x="16" y="276" width="86" height="77"/>
+                                    <rect key="frame" x="16" y="277" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel0" translatesAutoresizingMaskIntoConstraints="NO" id="fyz-qF-MiW" userLabel="level0ItchImageView">
                                             <rect key="frame" x="19" y="3" width="48" height="48"/>
@@ -207,7 +207,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no pica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9u-Tl-Agx" userLabel="level0ItchLabel">
-                                            <rect key="frame" x="18" y="51" width="49.5" height="17.5"/>
+                                            <rect key="frame" x="18" y="51" width="50" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -223,7 +223,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4w-Zl-XAr" userLabel="level1ItchView">
-                                    <rect key="frame" x="102" y="276" width="85.5" height="77"/>
+                                    <rect key="frame" x="102" y="277" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel1" translatesAutoresizingMaskIntoConstraints="NO" id="noU-N0-ZTD" userLabel="level1ItchImageVIew">
                                             <rect key="frame" x="18.5" y="3" width="48" height="48"/>
@@ -233,7 +233,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="leve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVC-7B-hvs" userLabel="level1ItchLabel">
-                                            <rect key="frame" x="29" y="51" width="27" height="17.5"/>
+                                            <rect key="frame" x="28.5" y="51" width="27" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -248,7 +248,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-0a-fzg" userLabel="level2ItchView">
-                                    <rect key="frame" x="187.5" y="276" width="86" height="77"/>
+                                    <rect key="frame" x="187.5" y="277" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel2" translatesAutoresizingMaskIntoConstraints="NO" id="Cid-tE-1kw" userLabel="level2ItchImageVIew">
                                             <rect key="frame" x="19" y="3" width="48" height="48"/>
@@ -258,7 +258,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moderado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXD-bv-y38" userLabel="level2ItchLabel">
-                                            <rect key="frame" x="8.5" y="51" width="69" height="17.5"/>
+                                            <rect key="frame" x="9" y="51" width="69" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -273,7 +273,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8o-ME-alg" userLabel="level3ItchView">
-                                    <rect key="frame" x="273.5" y="276" width="85.5" height="77"/>
+                                    <rect key="frame" x="273.5" y="277" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevel3" translatesAutoresizingMaskIntoConstraints="NO" id="R6Q-Hu-jOO" userLabel="level3ItchImageVIew">
                                             <rect key="frame" x="18.5" y="3" width="48" height="48"/>
@@ -283,7 +283,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="severo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8n-ZG-eQx" userLabel="level3ItchLabel">
-                                            <rect key="frame" x="20.5" y="51" width="44.5" height="17.5"/>
+                                            <rect key="frame" x="20.5" y="51" width="45" height="18"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -298,7 +298,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0L-rc-TSD" userLabel="noteView">
-                                    <rect key="frame" x="16" y="364" width="86" height="77"/>
+                                    <rect key="frame" x="16" y="365" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note" translatesAutoresizingMaskIntoConstraints="NO" id="QOH-Gq-iHO" userLabel="noteImageView">
                                             <rect key="frame" x="19" y="0.0" width="48" height="48"/>
@@ -329,7 +329,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o53-Tf-fgc" userLabel="photoView">
-                                    <rect key="frame" x="102" y="364" width="85.5" height="77"/>
+                                    <rect key="frame" x="102" y="365" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="jNh-hN-5kt" userLabel="photoImageView">
                                             <rect key="frame" x="18.5" y="0.0" width="48" height="48"/>
@@ -359,7 +359,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbm-ic-Vxj" userLabel="angioView">
-                                    <rect key="frame" x="187.5" y="364" width="86" height="77"/>
+                                    <rect key="frame" x="187.5" y="365" width="86" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angio" translatesAutoresizingMaskIntoConstraints="NO" id="SmJ-p0-sus" userLabel="angioImageView">
                                             <rect key="frame" x="19" y="0.0" width="48" height="48"/>
@@ -389,7 +389,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvv-zz-LwS" userLabel="limitationsView">
-                                    <rect key="frame" x="273.5" y="364" width="85.5" height="77"/>
+                                    <rect key="frame" x="273.5" y="365" width="85.5" height="77"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="limitations" translatesAutoresizingMaskIntoConstraints="NO" id="bG2-8D-BIT" userLabel="limitationsImageView">
                                             <rect key="frame" x="18.5" y="0.0" width="48" height="48"/>
@@ -418,11 +418,11 @@
                                         <constraint firstItem="jrJ-vz-CUa" firstAttribute="leading" secondItem="lvv-zz-LwS" secondAttribute="leading" id="vLn-P6-ZAH"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAq-V1-OBc" userLabel="dayMoreButton">
-                                    <rect key="frame" x="180" y="22" width="36" height="36"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-kd-mbX" userLabel="dayMoreButton">
+                                    <rect key="frame" x="181" y="22" width="36" height="36"/>
                                     <state key="normal" image="dayMore"/>
                                     <connections>
-                                        <action selector="dayMore:" destination="-1" eventType="touchUpInside" id="HnC-TB-h9u"/>
+                                        <action selector="dayMore:" destination="-1" eventType="touchUpInside" id="iUt-tv-fgy"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -450,7 +450,7 @@
                                 <constraint firstItem="hKx-iM-3rM" firstAttribute="width" secondItem="nL8-rT-1MM" secondAttribute="width" id="KBX-ca-Szw"/>
                                 <constraint firstItem="x8o-ME-alg" firstAttribute="trailing" secondItem="nbN-kB-RgR" secondAttribute="trailing" id="LRf-Ys-NqP"/>
                                 <constraint firstItem="I4w-Zl-XAr" firstAttribute="leading" secondItem="fPC-f1-D95" secondAttribute="trailing" id="O61-sw-cDz"/>
-                                <constraint firstItem="aAq-V1-OBc" firstAttribute="centerY" secondItem="EUv-PD-M8c" secondAttribute="centerY" id="Opx-iT-2yd"/>
+                                <constraint firstItem="Xgd-kd-mbX" firstAttribute="centerY" secondItem="EUv-PD-M8c" secondAttribute="centerY" id="OMm-GE-DOG"/>
                                 <constraint firstItem="8kS-NY-x1F" firstAttribute="height" secondItem="hKx-iM-3rM" secondAttribute="height" id="QU9-BZ-LCc"/>
                                 <constraint firstItem="seQ-kQ-IqO" firstAttribute="leading" secondItem="EUv-PD-M8c" secondAttribute="trailing" constant="11" id="RUI-99-Fys"/>
                                 <constraint firstItem="nL8-rT-1MM" firstAttribute="leading" secondItem="22z-f0-wUo" secondAttribute="trailing" id="Sp7-kl-zIf"/>
@@ -460,6 +460,7 @@
                                 <constraint firstItem="x8o-ME-alg" firstAttribute="width" secondItem="ke8-0a-fzg" secondAttribute="width" id="WwC-0a-wgg"/>
                                 <constraint firstItem="lbm-ic-Vxj" firstAttribute="height" secondItem="o53-Tf-fgc" secondAttribute="height" id="XvQ-7i-twA"/>
                                 <constraint firstItem="fPC-f1-D95" firstAttribute="leading" secondItem="nbN-kB-RgR" secondAttribute="leading" id="ZBn-v6-DUe"/>
+                                <constraint firstItem="Xgd-kd-mbX" firstAttribute="leading" secondItem="seQ-kQ-IqO" secondAttribute="trailing" constant="9" id="Zan-Yo-Lmm"/>
                                 <constraint firstItem="lbm-ic-Vxj" firstAttribute="top" secondItem="o53-Tf-fgc" secondAttribute="top" id="Zge-x4-i9i"/>
                                 <constraint firstItem="nbN-kB-RgR" firstAttribute="trailing" secondItem="Y8T-8H-GHk" secondAttribute="trailing" id="a8n-Yf-9kP"/>
                                 <constraint firstItem="hKx-iM-3rM" firstAttribute="top" secondItem="22z-f0-wUo" secondAttribute="top" id="cYF-8o-eeP"/>
@@ -469,18 +470,17 @@
                                 <constraint firstItem="y0L-rc-TSD" firstAttribute="top" secondItem="fPC-f1-D95" secondAttribute="bottom" constant="11" id="dd2-nh-5nl"/>
                                 <constraint firstItem="gVQ-f2-ugW" firstAttribute="leading" secondItem="8hb-35-eaj" secondAttribute="leading" constant="16" id="euj-AT-dFp"/>
                                 <constraint firstItem="eLx-cG-JTi" firstAttribute="leading" secondItem="EUv-PD-M8c" secondAttribute="trailing" constant="11" id="f4U-Ot-UMX"/>
-                                <constraint firstItem="aAq-V1-OBc" firstAttribute="leading" secondItem="eLx-cG-JTi" secondAttribute="trailing" constant="8" id="ffs-Qg-G9L"/>
                                 <constraint firstItem="ke8-0a-fzg" firstAttribute="width" secondItem="I4w-Zl-XAr" secondAttribute="width" id="g1k-D2-8bV"/>
                                 <constraint firstItem="22z-f0-wUo" firstAttribute="top" secondItem="Y8T-8H-GHk" secondAttribute="bottom" constant="16" id="i6U-fe-C08"/>
                                 <constraint firstItem="fPC-f1-D95" firstAttribute="top" secondItem="nbN-kB-RgR" secondAttribute="bottom" constant="16" id="ibU-B1-hbv"/>
                                 <constraint firstItem="hKx-iM-3rM" firstAttribute="height" secondItem="nL8-rT-1MM" secondAttribute="height" id="ioA-PN-rdz"/>
                                 <constraint firstItem="nbN-kB-RgR" firstAttribute="top" secondItem="22z-f0-wUo" secondAttribute="bottom" constant="24" id="k5r-Xr-Eyb"/>
                                 <constraint firstItem="y0L-rc-TSD" firstAttribute="leading" secondItem="fPC-f1-D95" secondAttribute="leading" id="mQS-Nj-LEo"/>
-                                <constraint firstItem="aAq-V1-OBc" firstAttribute="leading" secondItem="seQ-kQ-IqO" secondAttribute="trailing" constant="8" id="nRf-uL-kC5"/>
                                 <constraint firstItem="I4w-Zl-XAr" firstAttribute="top" secondItem="fPC-f1-D95" secondAttribute="top" id="nTI-ob-dI5"/>
                                 <constraint firstItem="nL8-rT-1MM" firstAttribute="width" secondItem="22z-f0-wUo" secondAttribute="width" id="nc8-Yq-Ecm"/>
                                 <constraint firstItem="lvv-zz-LwS" firstAttribute="width" secondItem="lbm-ic-Vxj" secondAttribute="width" id="oDY-G5-1an"/>
                                 <constraint firstItem="ke8-0a-fzg" firstAttribute="height" secondItem="I4w-Zl-XAr" secondAttribute="height" id="ofY-2T-tAI"/>
+                                <constraint firstItem="seQ-kQ-IqO" firstAttribute="trailing" secondItem="eLx-cG-JTi" secondAttribute="trailing" id="qO0-hD-VGd"/>
                                 <constraint firstItem="Y8T-8H-GHk" firstAttribute="top" secondItem="gVQ-f2-ugW" secondAttribute="bottom" constant="16" id="r27-oe-gfd"/>
                                 <constraint firstItem="o53-Tf-fgc" firstAttribute="leading" secondItem="y0L-rc-TSD" secondAttribute="trailing" id="rTx-WP-URA"/>
                                 <constraint firstItem="lvv-zz-LwS" firstAttribute="height" secondItem="lbm-ic-Vxj" secondAttribute="height" id="rV9-um-K9i"/>

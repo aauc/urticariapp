@@ -10,4 +10,9 @@
 
 @interface HistoryViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *whealsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *itchLabel;
+@property (strong, nonatomic) IBOutlet UILabel *angioLabel;
+@property (strong, nonatomic) IBOutlet UILabel *infoLabel;
+
 @end

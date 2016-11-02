@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryViewController">
             <connections>
                 <outlet property="angioImageView" destination="hOX-8R-7MZ" id="biL-fg-wID"/>
+                <outlet property="angioLabel" destination="usp-Ti-v5v" id="6hy-Gr-aOe"/>
                 <outlet property="containerCalendarView" destination="Qkt-0u-c0F" id="QnH-VW-2En"/>
-                <outlet property="infoLabel" destination="kXy-wY-MyQ" id="qRM-6F-n0H"/>
+                <outlet property="infoLabel" destination="kXy-wY-MyQ" id="9Jw-eR-6AX"/>
                 <outlet property="itchImageView" destination="chi-DY-yza" id="UqV-WR-Sba"/>
+                <outlet property="itchLabel" destination="n4d-RK-WQ0" id="LSk-Dz-Hs0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="whealsLabel" destination="6Xv-2A-ko3" id="KYt-gE-jvf"/>
                 <outlet property="whelasImageView" destination="chy-Dq-EpJ" id="DlA-tI-Pcu"/>
             </connections>
         </placeholder>
@@ -21,8 +27,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbf-ll-dkz" userLabel="scrollView">
+                    <rect key="frame" x="0.0" y="64" width="375" height="439"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkt-0u-c0F">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="439"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
@@ -34,16 +42,20 @@
                     </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1s-3j-2bV" userLabel="infoView">
+                    <rect key="frame" x="0.0" y="503" width="375" height="164"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4c-rI-KSz" userLabel="whealsView">
+                            <rect key="frame" x="14" y="0.0" width="152" height="48"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevelNone" translatesAutoresizingMaskIntoConstraints="NO" id="chy-Dq-EpJ" userLabel="whealsImageView">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="48" id="RwA-3E-SW4"/>
                                         <constraint firstAttribute="height" constant="48" id="WqI-6f-QO9"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ronchas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xv-2A-ko3" userLabel="whealsLabel">
+                                    <rect key="frame" x="56" y="15.5" width="88" height="17.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="88" id="NlK-ju-msK"/>
                                     </constraints>
@@ -63,14 +75,17 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4H-zg-ZNQ" userLabel="itchView">
+                            <rect key="frame" x="14" y="48" width="152" height="48"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uasLevelNone" translatesAutoresizingMaskIntoConstraints="NO" id="chi-DY-yza" userLabel="itchImageView">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="4yQ-qS-olJ"/>
                                         <constraint firstAttribute="width" constant="48" id="zCT-DF-GLg"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4d-RK-WQ0" userLabel="itchLabel">
+                                    <rect key="frame" x="56" y="15.5" width="88" height="17.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="88" id="5ef-Mb-tgO"/>
                                     </constraints>
@@ -90,14 +105,17 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIs-bf-CdS" userLabel="angioView">
+                            <rect key="frame" x="14" y="96" width="152" height="48"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angio0" translatesAutoresizingMaskIntoConstraints="NO" id="hOX-8R-7MZ" userLabel="angioImageView">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="48" id="ciz-4B-OLi"/>
                                         <constraint firstAttribute="height" constant="48" id="wGL-RY-eFU"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angioedema" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usp-Ti-v5v" userLabel="itchLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angioedema" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usp-Ti-v5v" userLabel="angioLabel">
+                                    <rect key="frame" x="56" y="15.5" width="88" height="17.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="88" id="iYs-fu-Exh"/>
                                     </constraints>
@@ -117,6 +135,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona una fecha resaltada para consultar el nivel UAS que registraste para ese día." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXy-wY-MyQ" userLabel="infoLabel">
+                            <rect key="frame" x="166" y="8" width="196" height="49"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
