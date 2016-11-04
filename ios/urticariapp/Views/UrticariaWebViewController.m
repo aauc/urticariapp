@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setTitle:@"La Urticaria"];
+    [self setTitle: NSLocalizedString(@"La Urticaria", nil)];
     
     [self.urticariaWebView setDelegate:self];
     [self.urticariaWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[UrticariaAppConfiguration getUrticariaUrl]]]];

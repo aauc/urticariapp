@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setTitle:@"Hazte socio/a"];
+    [self setTitle: NSLocalizedString(@"Hazte socio/a", nil)];
     
     [self.joinUsWebView setDelegate:self];
     [self.joinUsWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[UrticariaAppConfiguration getMemberUrl]]]];
