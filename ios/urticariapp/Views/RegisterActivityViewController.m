@@ -77,7 +77,7 @@
     [self.level2ItchLabel setText: NSLocalizedString(@"moderado", nil)];
     [self.level3ItchLabel setText: NSLocalizedString(@"severo", nil)];
     [self.noteLabel setText: NSLocalizedString(@"Añadir nota", nil)];
-    [self.photoLabel setText: NSLocalizedString(@"foto", nil)];
+    [self.photoLabel setText: NSLocalizedString(@"Foto", nil)];
     [self.angioLabel setText: NSLocalizedString(@"Angioedema", nil)];
     [self.limitationsLabel setText: NSLocalizedString(@"Limitaciones", nil)];
     
@@ -278,9 +278,9 @@
 
 
 - (void)takePhotoAction {
-    UIAlertController *actionSheetController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"Choose source", @"") preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *actionSheetController = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"Elige fuente", @"") preferredStyle:UIAlertControllerStyleActionSheet];
     
-    UIAlertAction *library = [UIAlertAction actionWithTitle:NSLocalizedString(@"Library", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *library = [UIAlertAction actionWithTitle:NSLocalizedString(@"Librería", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         UIImagePickerController *imagePickController = [self imagePicker];
         imagePickController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         
@@ -291,7 +291,7 @@
  
     }];
     
-    UIAlertAction *camera = [UIAlertAction actionWithTitle:NSLocalizedString(@"Camera", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *camera = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cámara", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         UIImagePickerController *imagePickController = [self imagePicker];
         imagePickController.sourceType = UIImagePickerControllerSourceTypeCamera;
         imagePickController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
@@ -302,7 +302,7 @@
    
     }];
     
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancelar", @"") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
       
     }];
     

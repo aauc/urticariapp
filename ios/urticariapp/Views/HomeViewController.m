@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setTitle: NSLocalizedString(@"UrticariaApp", nil)];
+    [self setTitle: NSLocalizedString(@"UrticariApp", nil)];
     [self.registerLabel setText:NSLocalizedString(@"Registrar actividad", nil)];
     [self.historyLabel setText:NSLocalizedString(@"Historial", nil)];
     [self.urticariaInfoLabel setText:NSLocalizedString(@"La Urticaria", nil)];
