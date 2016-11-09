@@ -70,7 +70,7 @@
             return NSLocalizedString(@"Deporte", nil);
             break;
         case INRegisterLimitationFreeTime:
-            return NSLocalizedString(@"Aficiones", nil);
+            return NSLocalizedString(@"Ocio", nil);
             break;
         case INRegisterLimitationHobby:
             return NSLocalizedString(@"Hobby", nil);
