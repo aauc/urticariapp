@@ -34,6 +34,7 @@
     <string name="urticaria_menu_item">La Urticaria</string>
     <string name="title_activity_member">Hazte socio/a</string>
     <string name="add_note">Añadir nota</string>
+    <string name="itch_level_info"> </string>
     <string name="date_info">Elije la fecha que deseas registrar.</string>
     <string name="title_activity_history">Historial</string>
     <string name="hello_world">Hello world!</string>
@@ -83,6 +84,5 @@
     <string name="limit_sex">Vida sexual</string>
     <string name="limitations_question">¿En qué te ha limitado la urticaria?</string>
     <string name="future_day">No puedes registrar un día futuro.</string>
-    <string name="itch_level_info"> </string>
     <string name="wheals_level_info"> </string>
 </resources>
